@@ -5,8 +5,11 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./catalog.css');
+@import url('./categories.css');
+@import url('./shopping-list.css');
+@import url('./support.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
