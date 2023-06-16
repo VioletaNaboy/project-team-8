@@ -1,1 +1,2 @@
-import './js/shoppingListCard';
+import './js/shopping-list-card';
+import './js/render-shopping-list';

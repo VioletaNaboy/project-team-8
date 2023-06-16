@@ -116,7 +116,7 @@ const testBook = {
   __v: 0,
 };
 
-console.log(createMarkupLibraryCard(testBook));
+// console.log(createMarkupLibraryCard(testBook));
 
 function createShoopsList(shopsLink) {
   const booksShops = {};
