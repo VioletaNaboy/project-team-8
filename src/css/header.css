@@ -4,10 +4,27 @@
   background: #ffffff;
   border: 1.5px solid #111111;
   border-radius: 0px 0px 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
+.nav-header {
+  display: none;
+}
+.user-header {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .header {
     height: 72px;
+  }
+  .nav-header {
+    display: flex;
+  }
+  .user-header {
+    display: flex;
+  }
+  .menu-header {
+    display: none;
   }
 }
