@@ -11,8 +11,12 @@ body {
   color: #111111;
 }
 .shopping-list-container{
+  max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 .shopping-list-title{
   margin-bottom: 40px;
@@ -26,7 +30,7 @@ body {
 .shoping-card {
   box-sizing: border-box;
   margin-bottom: 20px;
-  min-width: 335px;
+  max-width: 335px;
   padding: 14px;
   height: 170px;
   position: relative;
@@ -59,7 +63,7 @@ body {
   width: 100%;
 }
 .book-title {
-  max-width: 112px;
+  width: 112px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -91,7 +95,7 @@ body {
   justify-content: space-between;
 }
 .book-author {
-  max-width: 110px;
+  width: 110px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -120,18 +124,61 @@ body {
 .shop-icone {
   width: 100%;
 }
+
 @media screen and (max-width: 374px) {
-  /* .book-author {
+  .book-author {
   max-width: 60px;
-  } */
+  }
+}
+@media screen and (min-width: 375px) {
+  .book-title {
+  width: 162px;
+  }
 }
 @media screen and (min-width: 768px) {
-  /* .book-title {
-  max-width: 169px;
-  } */
+  .book-title {
+  width: 495px;
+  }
   /* .book-author {
   max-width: 110px;
   } */
+  .book-author {
+  width: 100%;
+  }
+  .shopping-list-container{
+  max-width: 768px;
+  padding-left: 32px;
+  padding-right: 32px;
+  }
+  .shopping-list-title{
+    font-size: 48px;
+    line-height: 1.08;
+  }
+  .shoping-card {
+  margin-bottom: 20px;
+  max-width: 704px;
+  padding: 24px;
+  height: 213px;
+  gap: 24px;
+}
+.remove-btn {
+  right: 24px;
+  top: 24px;
+  width: 34px;
+  height: 34px;
+}
+.description-text {
+  margin-top: 14px;
+  height: 53px;
+}
+.bottom-wrapper {
+  margin-top: 32px;
+  align-items: flex-end;
+}
+.buy-links {
+  gap: 16px;
+}
+
 }
 /* @media screen and (min-width: 425px) {
   .book-title {
