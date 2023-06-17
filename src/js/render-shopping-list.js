@@ -28,7 +28,8 @@ const testBookArr = [
     contributor: 'by Rick Rubin with Neil Strauss',
     contributor_note: '',
     created_date: '2023-04-05 23:10:12',
-    description: '',
+    description:
+      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
     first_chapter_link: '',
     price: '0.00',
     primary_isbn10: '0593652886',
@@ -37,7 +38,8 @@ const testBookArr = [
     rank: 2,
     rank_last_week: 0,
     sunday_review_link: '',
-    title: 'THE CREATIVE ACT',
+    title:
+      'THE CREATIVE ACT dsfdsfsdfsdfsdg fdrfgdreftertret  ewrewrewrerwerwerewrwerewrew',
     updated_date: '2023-04-05 23:10:12',
     weeks_on_list: 0,
     buy_links: [
@@ -85,7 +87,8 @@ const testBookArr = [
     contributor: 'by Matthew Desmond',
     contributor_note: '',
     created_date: '2023-04-05 23:10:12',
-    description: '',
+    description:
+      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
     first_chapter_link: '',
     price: '0.00',
     primary_isbn10: '0593239911',
@@ -143,7 +146,8 @@ const testBookArr = [
     contributor: 'by James Clear',
     contributor_note: '',
     created_date: '2023-04-05 23:10:12',
-    description: '',
+    description:
+      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
     first_chapter_link: '',
     price: '0.00',
     primary_isbn10: '0735211299',
@@ -201,7 +205,8 @@ const testBookArr = [
     contributor: 'by Brené Brown',
     contributor_note: '',
     created_date: '2023-04-05 23:10:13',
-    description: '',
+    description:
+      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
     first_chapter_link: '',
     price: '0.00',
     primary_isbn10: '0399592520',

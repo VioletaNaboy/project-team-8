@@ -1,8 +1,143 @@
 body {
   font-size: medium;
+  font-family: 'DM Sans', sans-serif;
+  background-color:  #F6F6F6; 
+  margin: 0;
 }
 
 .shopping-list-section {
   padding-top: 40px;
   padding-bottom: 40px;
+  color: #111111;
 }
+.shopping-list-container{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.shopping-list-title{
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.19;
+}
+.shopping-list-title-blue{
+  color: #4F2EE8;
+}
+.shoping-card {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  min-width: 335px;
+  padding: 14px;
+  height: 170px;
+  position: relative;
+  display: flex;
+  gap: 14px;
+  background-color: #FFFFFF;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  border-radius: 16px;
+}
+.remove-btn {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background-color: #4F2EE8;
+  border: none;
+  border-radius: 50%;
+}
+.remove-icone {
+  stroke: #FFFFFF;
+  fill: transparent;
+}
+.book-image {
+  width: 100px;
+  height: 142px;
+}
+.description-block {
+  width: 100%;
+}
+.book-title {
+  max-width: 112px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+.book-categoty {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #B4AFAF;
+}
+.description-text {
+  margin-top: 8px;
+  height: 68px;
+  overflow-y: scroll;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+}
+.bottom-wrapper {
+  /* width: 193px; */
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.book-author {
+  max-width: 110px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.04em;
+
+  color: #B4AFAF;
+}
+.links-wrapper {
+  margin-left: auto;
+  min-width: 80px;
+}
+.buy-links {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+.buy-item {
+}
+.buy-link {
+
+}
+.shop-icone {
+  width: 100%;
+}
+@media screen and (max-width: 374px) {
+  /* .book-author {
+  max-width: 60px;
+  } */
+}
+@media screen and (min-width: 768px) {
+  /* .book-title {
+  max-width: 169px;
+  } */
+  /* .book-author {
+  max-width: 110px;
+  } */
+}
+/* @media screen and (min-width: 425px) {
+  .book-title {
+  max-width: 213px;
+  }
+   .book-author {
+  min-width: 110px;
+  }
+} */
