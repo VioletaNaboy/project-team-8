@@ -16,7 +16,7 @@ export default function createMarkupLibraryCard({
         </svg>
       </button>
       <img
-        src="${book_image}" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg'"
+        src="${book_image}" onerror="this.src='img/shopping-list/No-Image-Available-116-165.jpg'"
         alt="${title}"
         class="book-image"
         width="116"
@@ -32,23 +32,32 @@ export default function createMarkupLibraryCard({
         <ul class="buy-links">
           <li class="buy-item">
             <a href="${booksShops['Amazon']}" class="buy-link">
-              <svg class="shop-icone" width="48" height="15">
-                <use href="#"></use>
-              </svg>
+               <img 
+               src="img/shopping-list/icon-amazon.png" 
+               alt="icon amazon" 
+               class="shop-icone" 
+               width="48" 
+               height="15"/>
             </a>
           </li>
           <li class="buy-item">
             <a href="${booksShops['Apple Books']}" class="buy-link">
-              <svg class="shop-icone" width="28" height="27">
-                <use href="#"></use>
-              </svg>
+               <img 
+               src="img/shopping-list/icon-apple-books.png" 
+               alt="icon amazon" 
+               class="shop-icone" 
+               width="28" 
+               height="27"/>
             </a>
           </li>
           <li class="buy-item">
             <a href="${booksShops['Bookshop']}" class="buy-link">
-              <svg class="shop-icone" width="32" height="30">
-                <use href="#"></use>
-              </svg>
+              <img 
+               src="img/shopping-list/icon-book-shop.png" 
+               alt="icon amazon" 
+               class="shop-icone" 
+               width="32" 
+               height="30"/>
             </a>
           </li>
         </ul>
