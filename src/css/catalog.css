@@ -1,3 +1,79 @@
 body {
   font-size: medium;
 }
+.best-seller-header{
+  font-weight: 700;
+  font-style: 48px;
+}
+.best-seller-header span{
+  color: #4f2ee8;
+}
+.genre-type{
+  font-size: 14px;
+  color: #b4afaf;
+  font-weight: 400;
+}
+.book-cover{
+  width: 180px;
+  height: 256px;
+  border-radius: 8px;
+  background-color: #b3b3b3;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card .desc{
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.book-title{
+  font-weight: 700;
+  font-size: 16px;
+}
+.book-author{
+  font-weight: 400;
+  color: #b4afaf;
+  font-size: 12px;
+  font-style: italic;
+}
+.see-more{
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 40px;
+  border: 2px solid;
+  border-color: #4f2ee8;
+  background: none;
+  padding: 14px 28px 14px 28px;
+
+}
+.gallery-and-genre-type{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  align-items: flex-start;
+}
+.gallery{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+.main-block{
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  flex-direction: column;
+}
+.catalog{
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
