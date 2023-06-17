@@ -58,6 +58,7 @@ body {
 .book-image {
   width: 100px;
   height: 142px;
+  border-radius: 8px;
 }
 .description-block {
   width: 100%;
@@ -83,7 +84,7 @@ body {
 .description-text {
   margin-top: 8px;
   height: 68px;
-  overflow-y: scroll;
+  overflow-y: auto;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.04em;
@@ -167,6 +168,10 @@ body {
   width: 34px;
   height: 34px;
 }
+.book-image {
+  width: 116px;
+  height: 165px;
+}
 .description-text {
   margin-top: 14px;
   height: 53px;
@@ -178,7 +183,23 @@ body {
 .buy-links {
   gap: 16px;
 }
-
+}
+@media screen and (min-width: 1440px) {
+  .shopping-list-container{
+  max-width: 1020px;
+  padding-right: 24px;
+  padding-left: 0;
+  }
+  .shoping-card {
+  max-width: 996px;
+  }
+  .book-title {
+  width: 775px;
+  }
+  .description-text {
+  height: 54px;
+}
+  
 }
 /* @media screen and (min-width: 425px) {
   .book-title {
