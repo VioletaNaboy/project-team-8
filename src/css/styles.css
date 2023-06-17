@@ -10,6 +10,8 @@
 @import url('./categories.css');
 @import url('./shopping-list.css');
 @import url('./support.css');
+@import url('./pop-up.css');
+@import url('./mobile-menu.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
