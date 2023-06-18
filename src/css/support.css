@@ -28,6 +28,9 @@
   font-size: 28px;
   line-height: 32px;
 }
+.support-header-svg {
+  fill: #ffffff;
+}
 .support-funds-list {
   display: flex;
   flex-direction: column;
@@ -64,6 +67,9 @@
 
   cursor: pointer;
   margin: 0 auto;
+}
+.support-slider-svg {
+  fill: #4f2ee8;
 }
 
 @media screen and (min-width: 768px) {
