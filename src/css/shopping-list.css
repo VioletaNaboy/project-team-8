@@ -40,6 +40,9 @@ body {
   border: 2px solid rgba(79, 46, 232, 0.4);
   border-radius: 16px;
 }
+.display-none{
+  display: none;
+}
 .remove-btn {
   position: absolute;
   right: 14px;
