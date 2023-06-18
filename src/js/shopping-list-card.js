@@ -1,3 +1,4 @@
+import sprite from '../img/shopping-list/sprite-shopping-list.svg';
 export default function createMarkupLibraryCard({
   _id,
   title,
@@ -12,11 +13,11 @@ export default function createMarkupLibraryCard({
   return `<div class="shoping-card" id="${_id}">
       <button class="remove-btn" type="button" id="${_id}">
         <svg class="remove-icone" width="18" height="18">
-          <use href="./img/shopping-list/sprite-shopping-list.svg#icon-trash"></use>
+          <use href="${sprite}#icon-trash"></use>
         </svg>
       </button>
       <img
-        src="${book_image}" onerror="this.src='./img/shopping-list/No-Image-Available-116-165.jpg'"
+        src="${book_image}" onerror="this.src='img/shopping-list/No-Image-Available-116-165.jpg'"
         alt="${title}"
         class="book-image"
         width="116"
@@ -39,24 +40,20 @@ export default function createMarkupLibraryCard({
                 <picture class="shop-icone" width="32" height="11">
                   <source
                     srcset="
-
-                      ./img/shopping-list/icon-amazon-desktop.png,
-                      ./img/shopping-list/icon-amazon-desktop@2x.png
+                      ../img/shopping-list/icon-amazon-desktop.png,
+                      ../img/shopping-list/icon-amazon-desktop@2x.png
                     "
                     media="(min-width: 768px)"
                   />
                   <source
                     srcset="
-
-                      ./img/shopping-list/icon-amazon-mobile.png,
-                      ./img/shopping-list/icon-amazon-mobile@2x.png
-
+                      ../img/shopping-list/icon-amazon-mobile.png,
+                      ../img/shopping-list/icon-amazon-mobile@2x.png
                     "
                     media="(max-width: 767px)"
                   />
                   <img
-                    src="./img/shopping-list/icon-amazon-desktop.png, ./img/shopping-list/icon-amazon-desktop@2x.png"
-
+                    src="../img/shopping-list/icon-amazon-desktop.png, ./img/shopping-list/icon-amazon-desktop@2x.png"
                     alt="icon amazon"
                   />
                 </picture>
@@ -69,26 +66,20 @@ export default function createMarkupLibraryCard({
                 <picture class="shop-icone" width="16" height="16">
                   <source
                     srcset="
-
                       ./img/shopping-list/icon-apple-books-desktop.png,
                       ./img/shopping-list/icon-apple-books-desktop@2x.png
-
                     "
                     media="(min-width: 768px)"
                   />
                   <source
                     srcset="
-
                       ./img/shopping-list/icon-apple-books-mobile.png,
                       ./img/shopping-list/icon-apple-books-mobile@2x.png
-
                     "
                     media="(max-width: 767px)"
                   />
                   <img
-
                     src="./img/shopping-list/icon-apple-books-desktop.png, ./img/shopping-list/icon-apple-books-desktop@2x.png"
-
                     alt="icon apple books"
                   />
                 </picture>
@@ -101,26 +92,20 @@ export default function createMarkupLibraryCard({
                  <picture class="shop-icone" width="16" height="16">
                   <source
                     srcset="
-
-                      ./img/shopping-list/icon-book-shop-desktop.png,
-                      ./img/shopping-list/icon-book-shop-desktop@2x.png
-
+                      img/shopping-list/icon-book-shop-desktop.png,
+                      img/shopping-list/icon-book-shop-desktop@2x.png
                     "
                     media="(min-width: 768px)"
                   />
                   <source
                     srcset="
-
-                      ./img/shopping-list/icon-book-shop-mobile.png,
-                      ./img/shopping-list/icon-book-shop-mobile@2x.png
-
+                      img/shopping-list/icon-book-shop-mobile.png,
+                      img/shopping-list/icon-book-shop-mobile@2x.png
                     "
                     media="(max-width: 767px)"
                   />
                   <img
-
-                    src="./img/shopping-list/icon-book-shop-desktop.png, ./img/shopping-list/icon-book-shop-desktop@2x.png"
-
+                    src="img/shopping-list/icon-book-shop-desktop.png, ./img/shopping-list/icon-book-shop-desktop@2x.png"
                     alt="icon book shop"
                   />
                 </picture>
