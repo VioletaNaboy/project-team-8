@@ -2,7 +2,17 @@ import createMarkupLibraryCard from './shopping-list-card';
 
 const shoppingListEl = document.querySelector('.shopping-list-container');
 
-function renderShoppingList(arr) {
+// function renderShoppingList(arr) {
+//   const shoppingListCard = arr
+//     .map(card => createMarkupLibraryCard(card))
+//     .join('');
+//   //   console.log(shoppingListCard);
+//   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
+// }
+
+function renderShoppingList() {
+  const arr = JSON.parse(localStorage.getItem('shopping list'));
+  console.log(arr);
   const shoppingListCard = arr
     .map(card => createMarkupLibraryCard(card))
     .join('');
@@ -595,19 +605,37 @@ const testBookArr = [
   },
 ];
 /* |=========================| Тестовий запит |=========================| */
-// localStorage.setItem('shopping list', JSON.stringify(testBookArr));
+localStorage.setItem('shopping list', JSON.stringify(testBookArr));
 
 const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
 // console.log(testLocalStorage);
 
-renderShoppingList(testBookArr);
+// renderShoppingList(testBookArr);
 // renderShoppingList(testLocalStorage);
+renderShoppingList();
 /* |=========================|  |=========================| */
-const shoppingListCardRef = document.querySelectorAll('.shoping-card');
-console.log(shoppingListCardRef);
+const shoppingListCardRef = document.querySelectorAll('.remove-btn');
+// console.log(shoppingListCardRef);
+
 shoppingListCardRef.forEach(card => {
-  console.log(card);
-  card.addEventListener('click', e => {
-    console.log(e);
-  });
+  //   console.log(card);
+  card.addEventListener('click', onRemoveCard);
 });
+function onRemoveCard(event) {
+  const LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
+  //   event.preventDefault();
+  console.log(event.currentTarget.id);
+  const id = event.currentTarget.id;
+  //   console.log(event.currentTarget);
+  //   console.log(testLocalStorage);
+  const newShoppingList = LocalStorageData.filter(({ _id }) => _id !== id);
+  console.log(newShoppingList);
+  localStorage.setItem('shopping list', JSON.stringify(newShoppingList));
+  //   shoppingListEl.innerHTML = '';
+  //   renderShoppingList();
+  //   console.log(renderShoppingList(newShoppingList));
+}
+// const newTestBookArr = testBookArr.filter(
+//   ({ _id }) => _id !== '643282b1e85766588626a0b6'
+// );
+// console.log(newTestBookArr);

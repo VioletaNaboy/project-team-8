@@ -1,4 +1,5 @@
 export default function createMarkupLibraryCard({
+  _id,
   title,
   list_name,
   author,
@@ -8,8 +9,8 @@ export default function createMarkupLibraryCard({
 }) {
   const booksShops = createShoopsList(buy_links);
 
-  return `<div class="shoping-card">
-      <button class="remove-btn" type="button">
+  return `<div class="shoping-card" id="${_id}">
+      <button class="remove-btn" type="button" id="${_id}">
         <svg class="remove-icone" width="18" height="18">
           <use href="./img/shopping-list/sprite-shopping-list.svg#icon-trash"></use>
         </svg>
