@@ -4,6 +4,7 @@
   | default @import url()
   |============================
 */
+@import url('./general.css');
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./catalog.css');
@@ -12,9 +13,7 @@
 @import url('./support.css');
 @import url('./pop-up.css');
 @import url('./mobile-menu.css');
-/* body {
-  font-family: 'DM Sans', sans-serif;
-} */
+
 /* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;

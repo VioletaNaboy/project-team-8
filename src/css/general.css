@@ -1,0 +1,44 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+.container {
+  padding: 40px 20px 80px;
+}
+.sidebar-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+.sidebar-sl {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 40px 32px 100px;
+  }
+  .sidebar-home {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    gap: 40px;
+    padding: 40px 24px 72px;
+  }
+  .sidebar-home {
+    width: 356px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 86px;
+  }
+  .sidebar-sl {
+    display: block;
+  }
+}
