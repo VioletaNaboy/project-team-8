@@ -10,34 +10,34 @@ export default function createMarkupLibraryCard({
 }) {
   const booksShops = createShoopsList(buy_links);
 
-  return `<div class="shoping-card" id="${_id}">
-      <button class="remove-btn" type="button" id="${_id}">
-        <svg class="remove-icone" width="18" height="18">
+  return `<div class="shopping-list-card" id="${_id}">
+      <button class="shopping-list-remove-btn" type="button" id="${_id}">
+        <svg class="shopping-list-remove-icone" width="18" height="18">
           <use href="${sprite}#icon-trash"></use>
         </svg>
       </button>
       <img
         src="${book_image}" onerror="this.src='img/shopping-list/No-Image-Available-116-165.jpg'"
         alt="${title}"
-        class="book-image"
+        class="shopping-list-book-image"
         width="116"
         height="165"
       />
-      <div class="description-block">
-        <h2 class="book-title">${title}</h2>
-        <p class="book-categoty">${list_name}</p>
-        <p class="description-text">
+      <div class="shopping-list-description-block">
+        <h2 class="shopping-list-book-title">${title}</h2>
+        <p class="shopping-list-book-categoty">${list_name}</p>
+        <p class="shopping-list-description-text">
           ${description}
         </p>
-        <div class="bottom-wrapper">
-          <p class="book-author">${author}</p>
-          <div class="links-wrapper">
-            <ul class="buy-links">
-            <li class="buy-item">
-              <a href="${booksShops['Amazon']}" class="buy-link"
+        <div class="shopping-list-bottom-wrapper">
+          <p class="shopping-list-book-author">${author}</p>
+          <div class="shopping-list-links-wrapper">
+            <ul class="shopping-list-buy-links">
+            <li class="shopping-list-buy-item">
+              <a href="${booksShops['Amazon']}" class="shopping-list-buy-link"
               target="_blank" rel="noreferrer noopener"
               >
-                <picture class="shop-icone" width="32" height="11">
+                <picture class="shopping-list-shop-icone" width="32" height="11">
                   <source
                     srcset="
                       ../img/shopping-list/icon-amazon-desktop.png,
@@ -59,11 +59,11 @@ export default function createMarkupLibraryCard({
                 </picture>
               </a>
             </li>
-            <li class="buy-item">
-              <a href="${booksShops['Apple Books']}" class="buy-link"
+            <li class="shopping-list-buy-item">
+              <a href="${booksShops['Apple Books']}" class="shopping-list-buy-link"
               target="_blank" rel="noreferrer noopener"
               >
-                <picture class="shop-icone" width="16" height="16">
+                <picture class="shopping-list-shop-icone" width="16" height="16">
                   <source
                     srcset="
                       ./img/shopping-list/icon-apple-books-desktop.png,
@@ -85,11 +85,11 @@ export default function createMarkupLibraryCard({
                 </picture>
               </a>
             </li>
-            <li class="buy-item">
-              <a href="${booksShops['Bookshop']}" class="buy-link"
+            <li class="shopping-list-buy-item">
+              <a href="${booksShops['Bookshop']}" class="shopping-list-buy-link"
               target="_blank" rel="noreferrer noopener"
               >
-                 <picture class="shop-icone" width="16" height="16">
+                 <picture class="shopping-list-shop-icone" width="16" height="16">
                   <source
                     srcset="
                       img/shopping-list/icon-book-shop-desktop.png,
