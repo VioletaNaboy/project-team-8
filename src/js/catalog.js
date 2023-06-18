@@ -6,17 +6,15 @@ const hardcoverFiction = document.querySelector(".hardcover-fiction .gallery");
 const hardcoverNonfiction = document.querySelector(".hardcover-nonfiction .gallery")
 
 const renderCategory = (category) => {
-    let string = "";
-    getBooksByCategory(category).then(result => result.data.forEach(element => {
-       string += `<div class="card">
+    getBooksByCategory(category).then(result => {return result.data.map(element => {
+       return `<div class="card">
        <img src="${element.url}" alt="${element.alt}" class="book-cover">
        <div class="desc">
            <p class="book-title">${element.title}</p>
            <p class="book-author">${element.author}</p>
        </div>
    </div>` 
-    }))
-    return string
+    }).join("")})
 }
 
 const categories = [combinedFiction, combinedNonfiction, hardcoverFiction, hardcoverNonfiction];
