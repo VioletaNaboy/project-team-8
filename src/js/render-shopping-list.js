@@ -600,7 +600,14 @@ const testBookArr = [
 const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
 // console.log(testLocalStorage);
 
-renderShoppingList(testLocalStorage);
+renderShoppingList(testBookArr);
+// renderShoppingList(testLocalStorage);
 /* |=========================|  |=========================| */
-const shoppingListCardRef = document.querySelectorAll('.remove-btn');
+const shoppingListCardRef = document.querySelectorAll('.shoping-card');
 console.log(shoppingListCardRef);
+shoppingListCardRef.forEach(card => {
+  console.log(card);
+  card.addEventListener('click', e => {
+    console.log(e);
+  });
+});
