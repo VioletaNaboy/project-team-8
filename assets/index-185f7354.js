@@ -1,11 +1,11 @@
 (function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const e of o)if(e.type==="childList")for(const r of e.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function s(o){const e={};return o.integrity&&(e.integrity=o.integrity),o.referrerPolicy&&(e.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?e.credentials="include":o.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function i(o){if(o.ep)return;o.ep=!0;const e=s(o);fetch(o.href,e)}})();function n({title:a,list_name:t,author:s,book_image:i,description:o,buy_links:e}){const r=p(e);return`<div class="shoping-card">
       <button class="remove-btn" type="button">
         <svg class="remove-icone" width="18" height="18">
-          <use href="img/shopping-list/sprite-shopping-list.svg#icon-trash"></use>
+          <use href="./img/shopping-list/sprite-shopping-list.svg#icon-trash"></use>
         </svg>
       </button>
       <img
-        src="${i}" onerror="this.src='img/shopping-list/No-Image-Available-116-165.jpg'"
+        src="${i}" onerror="this.src='./img/shopping-list/No-Image-Available-116-165.jpg'"
         alt="${a}"
         class="book-image"
         width="116"
@@ -26,20 +26,20 @@
                 <picture class="shop-icone" width="32" height="11">
                   <source
                     srcset="
-                      img/shopping-list/icon-amazon-desktop.png,
-                      img/shopping-list/icon-amazon-desktop@2x.png
+                      ./img/shopping-list/icon-amazon-desktop.png,
+                      ./img/shopping-list/icon-amazon-desktop@2x.png
                     "
                     media="(min-width: 768px)"
                   />
                   <source
                     srcset="
-                      img/shopping-list/icon-amazon-mobile.png,
-                      img/shopping-list/icon-amazon-mobile@2x.png
+                      ./img/shopping-list/icon-amazon-mobile.png,
+                      ./img/shopping-list/icon-amazon-mobile@2x.png
                     "
                     media="(max-width: 767px)"
                   />
                   <img
-                    src="img/shopping-list/icon-amazon-desktop.png, img/shopping-list/icon-amazon-desktop@2x.png"
+                    src="./img/shopping-list/icon-amazon-desktop.png, ./img/shopping-list/icon-amazon-desktop@2x.png"
                     alt="icon amazon"
                   />
                 </picture>
@@ -50,20 +50,20 @@
                 <picture class="shop-icone" width="16" height="16">
                   <source
                     srcset="
-                      img/shopping-list/icon-apple-books-desktop.png,
-                      img/shopping-list/icon-apple-books-desktop@2x.png
+                      ./img/shopping-list/icon-apple-books-desktop.png,
+                      ./img/shopping-list/icon-apple-books-desktop@2x.png
                     "
                     media="(min-width: 768px)"
                   />
                   <source
                     srcset="
-                      img/shopping-list/icon-apple-books-mobile.png,
-                      img/shopping-list/icon-apple-books-mobile@2x.png
+                      ./img/shopping-list/icon-apple-books-mobile.png,
+                      ./img/shopping-list/icon-apple-books-mobile@2x.png
                     "
                     media="(max-width: 767px)"
                   />
                   <img
-                    src="img/shopping-list/icon-apple-books-desktop.png, img/shopping-list/icon-apple-books-desktop@2x.png"
+                    src="./img/shopping-list/icon-apple-books-desktop.png, ./img/shopping-list/icon-apple-books-desktop@2x.png"
                     alt="icon apple books"
                   />
                 </picture>
@@ -74,20 +74,20 @@
                  <picture class="shop-icone" width="16" height="16">
                   <source
                     srcset="
-                      img/shopping-list/icon-book-shop-desktop.png,
-                      img/shopping-list/icon-book-shop-desktop@2x.png
+                      ./img/shopping-list/icon-book-shop-desktop.png,
+                      ./img/shopping-list/icon-book-shop-desktop@2x.png
                     "
                     media="(min-width: 768px)"
                   />
                   <source
                     srcset="
-                      img/shopping-list/icon-book-shop-mobile.png,
-                      img/shopping-list/icon-book-shop-mobile@2x.png
+                      ./img/shopping-list/icon-book-shop-mobile.png,
+                      ./img/shopping-list/icon-book-shop-mobile@2x.png
                     "
                     media="(max-width: 767px)"
                   />
                   <img
-                    src="img/shopping-list/icon-book-shop-desktop.png, img/shopping-list/icon-book-shop-desktop@2x.png"
+                    src="./img/shopping-list/icon-book-shop-desktop.png, ./img/shopping-list/icon-book-shop-desktop@2x.png"
                     alt="icon book shop"
                   />
                 </picture>
