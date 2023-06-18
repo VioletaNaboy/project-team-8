@@ -39,6 +39,6 @@ body {
     gap: 86px;
   }
   .sidebar-sl {
-    display: block;
+    display: flex;
   }
 }
