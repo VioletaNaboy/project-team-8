@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  min-width: 335px;
   height: 64px;
   background: #ffffff;
   border: 1.5px solid #111111;
