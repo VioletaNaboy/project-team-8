@@ -77,3 +77,29 @@ body {
   gap: 40px;
   flex-direction: column;
 }
+/* Laptop */
+@media screen and (max-width: 1024px) {
+  .gallery{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .book-cover{
+    width: 218px;
+    height: 316px;
+  }
+  .gallery{
+    width: 100%;
+    flex-wrap: wrap;
+    height: calc(366px + 24px);
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 425px) {
+  .book-cover{
+    width: 335px;
+    height: 485px;
+  }
+  .gallery{
+    height: calc(535px + 24px);
+  }
+}
