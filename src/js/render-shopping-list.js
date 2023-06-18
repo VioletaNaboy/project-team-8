@@ -2,27 +2,27 @@ import createMarkupLibraryCard from './shopping-list-card';
 
 const shoppingListEl = document.querySelector('.shopping-list-container');
 
-// function renderShoppingList(arr) {
-//   const shoppingListCard = arr
-//     .map(card => createMarkupLibraryCard(card))
-//     .join('');
-//   //   console.log(shoppingListCard);
-//   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
-// }
-const arr = JSON.parse(localStorage.getItem('shopping list'));
-renderShoppingList(arr);
-
 function renderShoppingList(arr) {
-  //   const arr = JSON.parse(localStorage.getItem('shopping list'));
-  console.log(arr);
-  shoppingListEl.innerHTML = '';
   const shoppingListCard = arr
     .map(card => createMarkupLibraryCard(card))
     .join('');
-
   //   console.log(shoppingListCard);
   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
 }
+// const arr = JSON.parse(localStorage.getItem('shopping list'));
+// renderShoppingList(arr);
+
+// function renderShoppingList(arr) {
+//   //   const arr = JSON.parse(localStorage.getItem('shopping list'));
+//   console.log(arr);
+//   shoppingListEl.innerHTML = '';
+//   const shoppingListCard = arr
+//     .map(card => createMarkupLibraryCard(card))
+//     .join('');
+
+//   //   console.log(shoppingListCard);
+//   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
+// }
 
 /* |=========================| Тестовий масив |=========================| */
 const testBookArr = [
@@ -614,7 +614,7 @@ localStorage.setItem('shopping list', JSON.stringify(testBookArr));
 const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
 // console.log(testLocalStorage);
 
-// renderShoppingList(testBookArr);
+renderShoppingList(testBookArr);
 // renderShoppingList(testLocalStorage);
 // renderShoppingList();
 /* |=========================|  |=========================| */
