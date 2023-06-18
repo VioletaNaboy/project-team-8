@@ -3,7 +3,9 @@ body {
   margin: 0;
 }
 .container {
-  padding: 40px 20px 80px;
+  width: 335px;
+  padding: 40px 0 80px;
+  margin: 0 auto;
 }
 .sidebar-home {
   display: flex;
@@ -18,7 +20,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container {
-    padding: 40px 32px 100px;
+    width: 776px;
+    padding: 40px 0 100px;
   }
   .sidebar-home {
     flex-direction: row;
@@ -28,6 +31,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .container {
+    width: 100%;
     display: flex;
     gap: 40px;
     padding: 40px 24px 72px;
