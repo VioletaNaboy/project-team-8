@@ -10,6 +10,7 @@ function renderShoppingList(arr) {
   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
 }
 
+/* |=========================| Тестовий масив |=========================| */
 const testBookArr = [
   {
     _id: '643282b1e85766588626a0b6',
@@ -593,4 +594,13 @@ const testBookArr = [
     __v: 0,
   },
 ];
-renderShoppingList(testBookArr);
+/* |=========================| Тестовий запит |=========================| */
+// localStorage.setItem('shopping list', JSON.stringify(testBookArr));
+
+const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
+// console.log(testLocalStorage);
+
+renderShoppingList(testLocalStorage);
+/* |=========================|  |=========================| */
+const shoppingListCardRef = document.querySelectorAll('.remove-btn');
+console.log(shoppingListCardRef);

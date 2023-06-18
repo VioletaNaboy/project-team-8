@@ -185,6 +185,7 @@ body {
 }
 .buy-links {
   gap: 16px;
+  align-items: center;
 }
 }
 @media screen and (min-width: 1440px) {
@@ -202,7 +203,7 @@ body {
   .description-text {
   height: 54px;
 }
-  
+
 }
 /* @media screen and (min-width: 425px) {
   .book-title {
