@@ -33,9 +33,11 @@ body {
 @media screen and (min-width: 1440px) {
   .container {
     width: 100%;
+    min-width: 1392px;
     display: flex;
     gap: 40px;
-    padding: 40px 24px 72px;
+    padding: 40px 0 72px;
+    margin: 0 auto;
   }
   .sidebar-home {
     width: 356px;
