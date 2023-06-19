@@ -4,14 +4,22 @@
   | default @import url()
   |============================
 */
+@import url('./general.css');
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./catalog.css');
 @import url('./categories.css');
 @import url('./shopping-list.css');
 @import url('./support.css');
+<<<<<<< HEAD
 @import url('./modal.css');
 :root {
+=======
+@import url('./pop-up.css');
+@import url('./mobile-menu.css');
+
+/* :root {
+>>>>>>> 74d03837568ba0e2e4c4f7a0c551dec2bd300124
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -25,4 +33,4 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
+} */
