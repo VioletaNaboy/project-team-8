@@ -9,11 +9,21 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  stroke: black;
+  color: black;
 }
 .header-wrapper {
   display: flex;
   gap: 14px;
   align-items: center;
+}
+.logo-text,
+.logo-shop {
+  fill: currentColor;
+  stroke: none;
+}
+.logo-svg {
+  stroke: none;
 }
 .logo {
   display: flex;
@@ -21,8 +31,9 @@
   gap: 8px;
 }
 .svg-menu {
-  stroke: black;
+  stroke: inherit;
   cursor: pointer;
+  fill: currentColor;
 }
 .switcher-checkbox {
   display: none;
@@ -63,6 +74,9 @@
 .user-header {
   display: none;
 }
+.sign-up-header {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .header {
     height: 72px;
@@ -83,7 +97,7 @@
     line-height: 1.29;
     letter-spacing: -0.04em;
     text-transform: uppercase;
-    color: #111111;
+    color: inherit;
   }
 
   .nav-item {
@@ -97,7 +111,35 @@
   .header-wrapper {
     gap: 24px;
   }
+  .sign-up-header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 184px;
+    height: 48px;
+    left: 0px;
+    top: 45px;
+    background: #4f2ee8;
+    border: 1.5px solid #111111;
+    border-radius: 18px;
+    padding: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.209;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+  }
+  .sign-up-header.hidden-sign-up {
+    display: none;
+  }
+  .arrow-right {
+    stroke: #eac645;
+    cursor: pointer;
+  }
   .user-header {
+    position: relative;
     display: flex;
     width: 184px;
     height: 45px;
