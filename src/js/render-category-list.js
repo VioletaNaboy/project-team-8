@@ -1,58 +1,25 @@
-<<<<<<< Updated upstream
-import { getCategories } from './apiService.';
-=======
- 
-export { getCategories } from './apiService.';
->>>>>>> Stashed changes
+import { getCategories } from './apiService.js';
 
-const categoryList = document.querySelector('category__list');
+const categoryList = document.querySelector('.category__list');
 
-
-<<<<<<< Updated upstream
-getCategories()
-  .then(categories => {
-    renderCategoryList(categories);
-})
-  
-function renderCategoryList(categories) {
-
-  categoryList.innerHTML = categories.map(category => {
-        return `
-         <li>
-         <button type="button"
-         class="category__list-button"
-          name = "${category.list_name}">
-         ${category.list_name}
-         </button>
-         </li>`;
-  }).join('');
-  
-}
-
-=======
-  getCategories()
-  .then(categories => {
-    renderCategoryList(categories);
-  })
-  .catch(error => {
-        console.log(error);
-      });
-
-
-function renderCategoryList(categories) {
-
-    categoryList.innerHTML = categories.map(category => {
-        return `
-         <li class="category_list" name = "${category.list_name}">
+function renderCategoryList(result) {
+  categoryList.innerHTML = result
+    .map(category => {
+      return `
+         <li class="category-list" name="${category.list_name}">
          ${category.list_name}
          </li>`;
-    }).join('');
-    
-    
+    })
+    .join('');
 }
-  
 
+async function getDataAndRenderCategoryList() {
+  try {
+    const result = await getCategories();
+    renderCategoryList(result.data);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-
-  
->>>>>>> Stashed changes
+getDataAndRenderCategoryList();
