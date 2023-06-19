@@ -1,11 +1,11 @@
 body {
   font-size: medium;
 }
-.best-seller-header{
+.catalog-header{
   font-weight: 700;
   font-style: 48px;
 }
-.best-seller-header span{
+.catalog-header span{
   color: #4f2ee8;
 }
 .genre-type{
@@ -79,6 +79,14 @@ body {
   display: flex;
   gap: 40px;
   flex-direction: column;
+}
+.gallery-select{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
 /* Laptop */
 @media screen and (max-width: 1024px) {
