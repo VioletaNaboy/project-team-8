@@ -1,29 +1,18 @@
+import { loadFromLocalStoradge, saveToLocalStoradge } from './localStorageApi';
 import createMarkupLibraryCard from './shopping-list-card';
 
-const shoppingListEl = document.querySelector('.shopping-list-container');
+const shoppingListEl = document.querySelector('.shopping-list-cards');
+const emptyShoppingListEl = document.querySelector('.empty-shopping-list');
 
-function renderShoppingList(arr) {
-  const shoppingListCard = arr
-    .map(card => createMarkupLibraryCard(card))
-    .join('');
-  //   console.log(shoppingListCard);
-  shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
-}
-// const arr = JSON.parse(localStorage.getItem('shopping list'));
-// renderShoppingList(arr);
-
+/* |=========================| Тестовий масив |=========================| */
 // function renderShoppingList(arr) {
-//   //   const arr = JSON.parse(localStorage.getItem('shopping list'));
-//   console.log(arr);
-//   shoppingListEl.innerHTML = '';
 //   const shoppingListCard = arr
 //     .map(card => createMarkupLibraryCard(card))
 //     .join('');
-
-//   //   console.log(shoppingListCard);
 //   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
 // }
 
+/* |=========================| Тестовий масив |=========================| */
 /* |=========================| Тестовий масив |=========================| */
 const testBookArr = [
   {
@@ -608,39 +597,61 @@ const testBookArr = [
     __v: 0,
   },
 ];
+
+// renderShoppingList(testBookArr);
 /* |=========================| Тестовий запит |=========================| */
-localStorage.setItem('shopping list', JSON.stringify(testBookArr));
 
-const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
-// console.log(testLocalStorage);
+/* |=========================| Робочий код |=========================| */
+// localStorage.setItem('shopping list', JSON.stringify(testBookArr));
 
-renderShoppingList(testBookArr);
-// renderShoppingList(testLocalStorage);
-// renderShoppingList();
-/* |=========================|  |=========================| */
-const shoppingListCardRef = document.querySelectorAll('.remove-btn');
-// console.log(shoppingListCardRef);
+saveToLocalStoradge('shopping list', testBookArr);
+const shoppingListCardRef = document.querySelectorAll(
+  '.shopping-list-remove-btn'
+);
 
-shoppingListCardRef.forEach(card => {
-  //   console.log(card);
-  card.addEventListener('click', onRemoveCard);
-});
+function renderShoppingList() {
+  //   const shoppingList = JSON.parse(localStorage.getItem('shopping list'));
+  const shoppingList = loadFromLocalStoradge('shopping list');
+
+  shoppingListEl.innerHTML = '';
+
+  if (shoppingList.length === 0) {
+    emptyShoppingListEl.classList.remove('display-none');
+  } else {
+    const shoppingListCard = shoppingList
+      .map(card => createMarkupLibraryCard(card))
+      .join('');
+
+    shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
+    const shoppingListCardRef = document.querySelectorAll(
+      '.shopping-list-remove-btn'
+    );
+    shoppingListCardRef.forEach(card =>
+      card.addEventListener('click', onRemoveCard)
+    );
+  }
+}
+renderShoppingList();
+
+// const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
+
 function onRemoveCard(event) {
-  const LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
+  let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
   //   event.preventDefault();
   console.log(event.currentTarget.id);
   const id = event.currentTarget.id;
   //   console.log(event.currentTarget);
-  //   console.log(testLocalStorage);
-  const newShoppingList = LocalStorageData.filter(({ _id }) => _id !== id);
+  LocalStorageData = LocalStorageData.filter(({ _id }) => _id !== id);
   //   console.log(newShoppingList);
-  renderShoppingList(newShoppingList);
-  localStorage.setItem('shopping list', JSON.stringify(newShoppingList));
+  //   LocalStorageData = newShoppingList;
+  // renderShoppingList(newShoppingList);
+
+  localStorage.setItem('shopping list', JSON.stringify(LocalStorageData));
+
+  console.log(LocalStorageData);
   //   shoppingListEl.innerHTML = '';
+  renderShoppingList();
   //   renderShoppingList(newShoppingList);
   //   console.log(renderShoppingList(newShoppingList));
 }
-// const newTestBookArr = testBookArr.filter(
-//   ({ _id }) => _id !== '643282b1e85766588626a0b6'
-// );
-// console.log(newTestBookArr);
+/* |=========================|  |=========================| */
