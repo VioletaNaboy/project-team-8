@@ -18,8 +18,8 @@
 
     
     
-    <script type="module" crossorigin src="/project-team-8/assets/render-shopping-list-e1ecee04.js"></script>
-    <link rel="stylesheet" href="/project-team-8/assets/render-shopping-list-91946a22.css">
+    <script type="module" crossorigin src="/project-team-8/assets/openModal-b2333456.js"></script>
+    <link rel="stylesheet" href="/project-team-8/assets/openModal-d8f1d6d6.css">
     <link rel="stylesheet" href="/project-team-8/assets/index-044fe572.css">
   </head>
   <body>
@@ -110,8 +110,17 @@
       <section style="display: none">Modal</section>
 
       <!-- Інна -->
-<section style="display: none"></section>
-
+<section class="pop-up-backdrop is-hidden" data-modal>
+      <div class="pop-up-modal">
+        <button type="button" class="pop-up-modal-cls-btn" data-modal-close>
+          <svg class="icon" width="14" height="14">
+            <use href="../img/x-close.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="pop-up-book-info"></div>
+        <button type="button" class="pop-up-modal-btn">Add to shopping list</button>
+      </div>
+  </section>
       <!-- Maksym -->
 <section style="display: none"></section>
 
