@@ -2,14 +2,14 @@ import { getDataBooksById } from "./getDataBooksById";
 
 const refs = {
   // Додати клас контейнера книжок, коли буде розмітка
-  // galleryBooks: document.querySelector('body'),
+  galleryBooks: document.querySelector('body'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
   bookInfo: document.querySelector('.pop-up-book-info'),
   body: document.querySelector('body'),
 };
 
-// refs.galleryBooks.addEventListener('click', onGalleryBookClick);
+refs.galleryBooks.addEventListener('click', onGalleryBookClick);
 refs.closeModalBtn.addEventListener('click', closeModal);
 refs.modal.addEventListener('click', closeOnBackdrop);
 
