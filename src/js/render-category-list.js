@@ -6,7 +6,9 @@ function renderCategoryList(result) {
   categoryList.innerHTML = result
     .map(category => {
       return `
-         <li class="category-list" name="${category.list_name}">
+
+         <li class="category_list" name="${category.list_name}">
+
          ${category.list_name}
          </li>`;
     })
