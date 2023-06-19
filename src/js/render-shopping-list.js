@@ -633,25 +633,18 @@ function renderShoppingList() {
 }
 renderShoppingList();
 
-// const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
-
 function onRemoveCard(event) {
-  let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
-  //   event.preventDefault();
-  console.log(event.currentTarget.id);
+  // let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
+  let LocalStorageData = loadFromLocalStoradge('shopping list');
+
   const id = event.currentTarget.id;
-  //   console.log(event.currentTarget);
+
   LocalStorageData = LocalStorageData.filter(({ _id }) => _id !== id);
-  //   console.log(newShoppingList);
-  //   LocalStorageData = newShoppingList;
-  // renderShoppingList(newShoppingList);
 
   localStorage.setItem('shopping list', JSON.stringify(LocalStorageData));
 
-  console.log(LocalStorageData);
-  //   shoppingListEl.innerHTML = '';
+  //   console.log(LocalStorageData);
+
   renderShoppingList();
-  //   renderShoppingList(newShoppingList);
-  //   console.log(renderShoppingList(newShoppingList));
 }
 /* |=========================|  |=========================| */

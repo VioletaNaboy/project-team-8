@@ -127,7 +127,11 @@ body {
 
 }
 .shopping-list-shop-icone {
-  width: 100%;
+  /* width: 100%; */
+}
+.shopping-list-shop-icone:hover {
+  /* width: 100%; */
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
 }
 .empty-shopping-list {
   margin-top: 120px;
