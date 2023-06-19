@@ -3,25 +3,28 @@
     <h1 class="shopping-list-title">
       Shopping <span class="shopping-list-title-blue">List</span>
     </h1>
+    <div class="shopping-list-cards"></div>
     <div class="empty-shopping-list display-none">
-      <p>This page is empty, add some books<br />and proceed to order.</p>
+      <p class="empty-shopping-list-text">
+        This page is empty, add some books<br />and proceed to order.
+      </p>
       <picture class="empty-shopping-list-img" width="265" height="198">
         <source
           srcset="
-            ../img/shopping-list/empty-shopping-list-desktop.png,
-            ../img/shopping-list/empty-shopping-list-desktop@2x.png
+            img/shopping-list/empty-shopping-list-desktop.png    1x,
+            img/shopping-list/empty-shopping-list-desktop@2x.png 2x
           "
           media="(min-width: 768px)"
         />
         <source
           srcset="
-            ../img/shopping-list/empty-shopping-list-desktop.png,
-            ../img/shopping-list/empty-shopping-list-desktop@2x.png
+            img/shopping-list/empty-shopping-list-mobile.png    1x,
+            img/shopping-list/empty-shopping-list-mobile@2x.png 2x
           "
           media="(max-width: 767px)"
         />
         <img
-          src="../img/shopping-list/empty-shopping-list-desktop.png, ./img/shopping-list/empty-shopping-list-desktop@2x.png"
+          src="img/shopping-list/empty-shopping-list-desktop.png"
           alt="empty shopping list"
           loading="lazy"
         />
@@ -29,6 +32,3 @@
     </div>
   </div>
 </section>
-=======
-<!-- Rostyslav -->
-<section>Shopping-List</section>
