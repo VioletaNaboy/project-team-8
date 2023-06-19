@@ -9,13 +9,17 @@ function renderShoppingList(arr) {
   //   console.log(shoppingListCard);
   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
 }
+// const arr = JSON.parse(localStorage.getItem('shopping list'));
+// renderShoppingList(arr);
 
-// function renderShoppingList() {
-//   const arr = JSON.parse(localStorage.getItem('shopping list'));
+// function renderShoppingList(arr) {
+//   //   const arr = JSON.parse(localStorage.getItem('shopping list'));
 //   console.log(arr);
+//   shoppingListEl.innerHTML = '';
 //   const shoppingListCard = arr
 //     .map(card => createMarkupLibraryCard(card))
 //     .join('');
+
 //   //   console.log(shoppingListCard);
 //   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
 // }
@@ -629,10 +633,11 @@ function onRemoveCard(event) {
   //   console.log(event.currentTarget);
   //   console.log(testLocalStorage);
   const newShoppingList = LocalStorageData.filter(({ _id }) => _id !== id);
-  console.log(newShoppingList);
+  //   console.log(newShoppingList);
+  renderShoppingList(newShoppingList);
   localStorage.setItem('shopping list', JSON.stringify(newShoppingList));
   //   shoppingListEl.innerHTML = '';
-  //   renderShoppingList();
+  //   renderShoppingList(newShoppingList);
   //   console.log(renderShoppingList(newShoppingList));
 }
 // const newTestBookArr = testBookArr.filter(
