@@ -55,11 +55,16 @@ body {
   background-color: #4F2EE8;
   border: none;
   border-radius: 50%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shopping-list-remove-btn:hover {
+  transform: scale(1.05);
 }
 .shopping-list-remove-icone {
   stroke: #FFFFFF;
   fill: transparent;
 }
+
 .shopping-list-book-image {
   width: 100px;
   height: 142px;
