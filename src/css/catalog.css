@@ -31,11 +31,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
-.book-title{
+.book-card-title{
   font-weight: 700;
   font-size: 16px;
+  max-width: 180px;
 }
-.book-author{
+.book-card-author{
   font-weight: 400;
   color: #b4afaf;
   font-size: 12px;
@@ -61,10 +62,12 @@ body {
 .gallery{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-  width: 100%;
+  height: calc(300px + 24px);
+  overflow: hidden;
 }
 .main-block{
   display: flex;
@@ -79,6 +82,9 @@ body {
 }
 /* Laptop */
 @media screen and (max-width: 1024px) {
+  .book-card-title{
+    width: 316px;
+  }
   .gallery{
     flex-wrap: wrap;
     width: 100%;
@@ -88,7 +94,7 @@ body {
     height: 316px;
   }
   .gallery{
-    width: 100%;
+    /* width: 100%; */
     flex-wrap: wrap;
     height: calc(366px + 24px);
     overflow: hidden;

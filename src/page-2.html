@@ -11,12 +11,18 @@
     />
     <load ="./fonts.html" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/active-sl.css" />
   </head>
   <body>
     <load ="partials/header.html" />
-    <load ="partials/support.html" />
-    <load ="partials/shopping-list.html" />
-    <load ="partials/mobile-menu.html" />
-    <load ="partials/modal.html" />
+    <div class="container">
+      <aside class="sidebar-sl">
+        <load ="partials/support.html" />
+      </aside>
+      <load ="partials/shopping-list.html" />
+      <load ="partials/mobile-menu.html" />
+      <load ="partials/modal.html" />
+    </div>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
