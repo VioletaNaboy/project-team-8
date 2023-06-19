@@ -6,21 +6,24 @@ const hardcoverFiction = document.querySelector(".hardcover-fiction .gallery");
 const hardcoverNonfiction = document.querySelector(".hardcover-nonfiction .gallery")
 
 const renderCategory = (category) => {
-    getBooksByCategory(category).then(result => {return result.data.map(element => {
-       return `<div class="card">
-       <img src="${element.url}" alt="${element.alt}" class="book-cover">
-       <div class="desc">
+    getBooksByCategory(category).then(result => {
+        let string = "";
+        result.data.map(element => {
+        string += `<div class="card">
+            <img src="${element.book_image}" alt="${element.alt}" class="book-cover">
+        <div class="desc">
            <p class="book-title">${element.title}</p>
            <p class="book-author">${element.author}</p>
        </div>
    </div>` 
-    }).join("")})
-}
-
-const categories = [combinedFiction, combinedNonfiction, hardcoverFiction, hardcoverNonfiction];
+    })
+    return string;
+})}
+renderCategory("Combined Print and E-Book Fiction");
+const categories = {combinedFiction : {name: "Combined Print and E-Book Fiction", element: combinedFiction}, combinedNonfiction : {name: "Combined Print and E-Book Nonfiction", element: combinedNonfiction}, hardcoverFiction : {name: "Hardcover Fiction", element: hardcoverFiction}, hardcoverNonfiction : {name: "Hardcover Nonfiction", element: hardcoverNonfiction}};
 
 const renderBooksToCategories = (categories) => {
     categories.forEach(category => {
-        category.insertAdjacentHTML("afterbegin", renderCategory(category));
+        category.element.insertAdjacentHTML("afterbegin", renderCategory(category.name));
     })
 }
