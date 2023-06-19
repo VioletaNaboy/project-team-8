@@ -1,29 +1,15 @@
 import createMarkupLibraryCard from './shopping-list-card';
 
-const shoppingListEl = document.querySelector('.shopping-list-container');
+const shoppingListEl = document.querySelector('.shopping-list-cards');
 
-function renderShoppingList(arr) {
-  const shoppingListCard = arr
-    .map(card => createMarkupLibraryCard(card))
-    .join('');
-  //   console.log(shoppingListCard);
-  shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
-}
-// const arr = JSON.parse(localStorage.getItem('shopping list'));
-// renderShoppingList(arr);
-
+/* |=========================| Тестовий масив |=========================| */
 // function renderShoppingList(arr) {
-//   //   const arr = JSON.parse(localStorage.getItem('shopping list'));
-//   console.log(arr);
-//   shoppingListEl.innerHTML = '';
 //   const shoppingListCard = arr
 //     .map(card => createMarkupLibraryCard(card))
 //     .join('');
-
 //   //   console.log(shoppingListCard);
 //   shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
-// }
-
+// }/* |=========================| Тестовий масив |=========================| */
 /* |=========================| Тестовий масив |=========================| */
 const testBookArr = [
   {
@@ -611,32 +597,61 @@ const testBookArr = [
 /* |=========================| Тестовий запит |=========================| */
 localStorage.setItem('shopping list', JSON.stringify(testBookArr));
 
+function renderShoppingList() {
+  const arr = JSON.parse(localStorage.getItem('shopping list'));
+  console.log(arr);
+  //   shoppingListEl.innerHTML = '';
+  const shoppingListCard = arr
+    .map(card => createMarkupLibraryCard(card))
+    .join('');
+  //   shoppingListEl.innerHTML = '';
+  //   console.log(shoppingListCard);
+
+  shoppingListEl.insertAdjacentHTML('beforeend', shoppingListCard);
+  const shoppingListCardRef = document.querySelectorAll(
+    '.shopping-list-remove-btn'
+  );
+  shoppingListCardRef.forEach(card =>
+    card.addEventListener('click', onRemoveCard)
+  );
+}
+renderShoppingList();
+
+// localStorage.setItem('shopping list', JSON.stringify(testBookArr));
+
 const testLocalStorage = JSON.parse(localStorage.getItem('shopping list'));
 // console.log(testLocalStorage);
 
-renderShoppingList(testBookArr);
+// renderShoppingList(testBookArr);
 // renderShoppingList(testLocalStorage);
 // renderShoppingList();
 /* |=========================|  |=========================| */
-const shoppingListCardRef = document.querySelectorAll('.remove-btn');
+// const shoppingListCardRef = document.querySelectorAll(
+//   '.shopping-list-remove-btn'
+// );
 // console.log(shoppingListCardRef);
 
-shoppingListCardRef.forEach(card => {
-  //   console.log(card);
-  card.addEventListener('click', onRemoveCard);
-});
+// shoppingListCardRef.forEach(card => {
+//   //   console.log(card);
+//   card.addEventListener('click', onRemoveCard);
+// });
 function onRemoveCard(event) {
-  const LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
+  let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
   //   event.preventDefault();
   console.log(event.currentTarget.id);
   const id = event.currentTarget.id;
   //   console.log(event.currentTarget);
   //   console.log(testLocalStorage);
-  const newShoppingList = LocalStorageData.filter(({ _id }) => _id !== id);
+  LocalStorageData = LocalStorageData.filter(({ _id }) => _id !== id);
   //   console.log(newShoppingList);
-  renderShoppingList(newShoppingList);
-  localStorage.setItem('shopping list', JSON.stringify(newShoppingList));
-  //   shoppingListEl.innerHTML = '';
+  //   LocalStorageData = newShoppingList;
+  // renderShoppingList(newShoppingList);
+
+  localStorage.setItem('shopping list', JSON.stringify(LocalStorageData));
+
+  console.log(LocalStorageData);
+  shoppingListEl.innerHTML = '';
+  renderShoppingList();
   //   renderShoppingList(newShoppingList);
   //   console.log(renderShoppingList(newShoppingList));
 }

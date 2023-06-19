@@ -1,4 +1,5 @@
 import sprite from '../img/shopping-list/sprite-shopping-list.svg';
+
 export default function createMarkupLibraryCard({
   _id,
   title,
