@@ -5,7 +5,7 @@ const hardcoverFiction = document.querySelector(".hardcover-fiction .gallery-and
 const hardcoverNonfiction = document.querySelector(".hardcover-non-fiction .gallery-and-genre-type")
 const renderCategoryInObject = (category, object) => {
     getBooksByCategory(category).then(result => {
-        object.insertAdjacentHTML('beforeend', `<div class="gallery">${result.data.map(element=>{return `<div class="card"><img src="${element.book_image}" class="book-cover"><div class="desc">
+        object.insertAdjacentHTML('beforeend', `<div class="gallery">${result.data.map(element=>{return `<div class="card" data-id="${element._id}"><img src="${element.book_image}" class="book-cover"><div class="desc">
     <div class="desc">
     <p class="book-card-title">${element.title}</p>
     <p class="book-card-author">${element.author}</p>
@@ -14,7 +14,7 @@ const renderCategoryInObject = (category, object) => {
 })}
 const renderSelectCategoryInObject = (category, object) => {
     getBooksByCategory(category).then(result => {
-    object.insertAdjacentHTML('beforeend', `<div class="gallery-select">${result.data.map(element=>{return `<div class="card"><img src="${element.book_image}" class="book-cover"><div class="desc">
+        object.insertAdjacentHTML('beforeend', `<div class="gallery-select">${result.data.map(element=>{return `<div class="card" data-id="${element._id}"><img src="${element.book_image}" class="book-cover"><div class="desc">
     <div class="desc">
     <p class="book-card-title">${element.title}</p>
     <p class="book-card-author">${element.author}</p>
@@ -27,11 +27,11 @@ const renderBooksToCategories = (categories) => {
         renderCategoryInObject(category.name, category.element)
     })
     }
-renderBooksToCategories(categories)
+renderBooksToCategories(categories);
+console.log(getBooksByCategory(categories[0].name))
 const list = document.querySelector(".category__list");
 const catalog = document.querySelector(".catalog");
 list.addEventListener("click", (e)=>{
-
     if (e.target.nodeName === "UL"){
         return
     }
