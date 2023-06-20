@@ -52,7 +52,7 @@ export default function createMarkupLibraryCard({
               <a href="${booksShops['Amazon']}" class="shopping-list-buy-link"
               target="_blank" rel="noreferrer noopener"
               >
-                <picture class="shopping-list-shop-icone" width="32" height="11">
+                <picture width="32" height="11">
                   <source
                     srcset="${iconAmazonDesk} 1x, ${iconAmazonDesk2} 2x"
                     media="(min-width: 768px)"
@@ -64,6 +64,7 @@ export default function createMarkupLibraryCard({
                   <img
                     src="${iconAmazonDesk}"
                     alt="icon amazon"
+                    class="shopping-list-shop-icone"
                     loading="lazy"
                   />
                 </picture>
@@ -73,7 +74,7 @@ export default function createMarkupLibraryCard({
               <a href="${booksShops['Apple Books']}" class="shopping-list-buy-link"
               target="_blank" rel="noreferrer noopener"
               >
-                <picture class="shopping-list-shop-icone" width="16" height="16">
+                <picture width="16" height="16">
                   <source
                     srcset="${iconAppleBooksDesk} 1x, ${iconAppleBooksDesk2} 2x"
                     media="(min-width: 768px)"
@@ -85,6 +86,7 @@ export default function createMarkupLibraryCard({
                   <img
                     src="${iconAppleBooksDesk}"
                     alt="icon apple books"
+                    class="shopping-list-shop-icone"
                     loading="lazy"
                   />
                 </picture>
@@ -94,7 +96,7 @@ export default function createMarkupLibraryCard({
               <a href="${booksShops['Bookshop']}" class="shopping-list-buy-link"
               target="_blank" rel="noreferrer noopener"
               >
-                 <picture class="shopping-list-shop-icone" width="16" height="16">
+                 <picture width="16" height="16">
                   <source
                     srcset="${iconBooksShopDesk} 1x, ${iconBooksShopDesk2} 2x"
                     media="(min-width: 768px)"
@@ -106,6 +108,7 @@ export default function createMarkupLibraryCard({
                   <img
                     src="${iconBooksShopDesk}"
                     alt="icon book shop"
+                    class="shopping-list-shop-icone"
                     loading="lazy"
                   />
                 </picture>
