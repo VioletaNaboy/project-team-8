@@ -144,4 +144,4 @@ function onUpBtnClick() {
   });
 }
 
-observerFunds.unobserve(guard);
+observerFunds.unobserve(fundsList.lastElementChild);
