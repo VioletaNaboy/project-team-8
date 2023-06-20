@@ -1,1 +1,222 @@
 /* Maksym */
+
+/* .mobile-menu-container__account-in {
+  right: -100%;
+  width: 100%;
+  min-height: 100%;
+} */
+
+/* .account-in {
+  display: none;
+} */
+
+@media screen and (max-width: 767px) {
+  /* --------- кнопка бургер-меню "відкрити" ----------- */
+  .mobile-menu__open-icon {
+    display: block;
+    z-index: 10;
+    position: relative;
+    width: 21px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .mobile-menu__span-up span,
+  .mobile-menu__span-down span,
+  .mobile-menu__open-icon::before,
+  .mobile-menu__open-icon::after {
+    left: 0;
+    position: absolute;
+    height: 2px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #111111;
+  }
+
+  .mobile-menu__span-up span {
+    margin-top: 3px;
+    width: 100%;
+  }
+
+  .mobile-menu__span-down span {
+    margin-bottom: 1px;
+    width: 16px;
+  }
+
+  .mobile-menu__open-icon::before,
+  .mobile-menu__open-icon::after {
+    content: '';
+  }
+
+  .mobile-menu__open-icon::before {
+    top: 0;
+    width: 100%;
+  }
+
+  .mobile-menu__open-icon::after {
+    bottom: 0;
+    width: 16px;
+  }
+
+  .mobile-menu__span-up span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  .mobile-menu__span-down span {
+    bottom: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  .mobile-menu__open-icon:hover .mobile-menu__span-up span,
+  .mobile-menu__open-icon:hover .mobile-menu__span-down span {
+    background-color: #4f2ee8;
+  }
+
+  .mobile-menu__open-icon:hover.mobile-menu__open-icon::before,
+  .mobile-menu__open-icon:hover.mobile-menu__open-icon::after {
+    background-color: #4f2ee8;
+  }
+  /* --------- кнопка бургер-меню "відкрити" ----------- */
+
+  html .mobile-menu-container__account-in,
+  body .mobile-menu-container__account-in {
+    height: 100%;
+  }
+
+  .mobile-menu-container__account-in {
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+
+    /* position: fixed;
+    top: 0; */
+
+    background: radial-gradient(
+      183.6% 183.01% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #ffffff 100%
+    );
+  }
+
+  /* ---- Фото та Ім'я користувача ---- */
+  .account-in {
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-top: 54px;
+
+    padding-top: 50px;
+    padding-left: 20px;
+
+    /* margin-top: 30px; */
+  }
+  .account-in__user {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .account-in__user-img {
+  }
+  .account-in__user-name {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: calc(29 / 22);
+
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+  }
+  /* ---- Фото та Ім'я користувача ---- */
+
+  /* ---- Навігація ---- */
+
+  .mobile-menu__nav-header-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 126px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .account-in__nav-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  .account-in__nav-item {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 36px;
+    cursor: pointer;
+  }
+  .account-in__logo-shop {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  /* ---- Навігація ---- */
+}
+
+/* ---- Кнопка "log out" ---- */
+.account-btn__log-out {
+}
+.account-btn__log-out-icon {
+}
+/* ---- Кнопка "log out" ---- */
+
+/* 
+----------------------------- 
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------*/
+
+/* 
+
+  .account-btn__sign-up {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 184px;
+      padding: 14px;
+
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(18 / 14);
+
+      letter-spacing: -0.04em;
+
+      color: #ffffff;
+
+      background: #4f2ee8;
+      border: 1.5px solid #111111;
+      border-radius: 18px;
+
+      z-index: 5;
+    }
+    .account-btn__sign-up-icon {
+      stroke: #eac645;
+      fill: transparent;
+    } */
