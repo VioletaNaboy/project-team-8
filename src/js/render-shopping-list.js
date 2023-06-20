@@ -3,6 +3,9 @@ import createMarkupLibraryCard from './shopping-list-card';
 
 const shoppingListEl = document.querySelector('.shopping-list-cards');
 const emptyShoppingListEl = document.querySelector('.empty-shopping-list');
+const paginationContainerEl = document.getElementById(
+  'tui-pagination-container'
+);
 
 /* |=========================| Тестовий масив |=========================| */
 // function renderShoppingList(arr) {
@@ -609,16 +612,18 @@ const shoppingListCardRef = document.querySelectorAll(
   '.shopping-list-remove-btn'
 );
 
-function renderShoppingList() {
+const shoppingList = loadFromLocalStoradge('shopping list');
+export function renderShoppingList(dataArr) {
   //   const shoppingList = JSON.parse(localStorage.getItem('shopping list'));
-  const shoppingList = loadFromLocalStoradge('shopping list');
+  //   const shoppingList = loadFromLocalStoradge('shopping list');
 
   shoppingListEl.innerHTML = '';
 
-  if (shoppingList.length === 0) {
+  if (dataArr.length === 0) {
     emptyShoppingListEl.classList.remove('display-none');
+    paginationContainerEl.classList.add('display-none');
   } else {
-    const shoppingListCard = shoppingList
+    const shoppingListCard = dataArr
       .map(card => createMarkupLibraryCard(card))
       .join('');
 
@@ -631,7 +636,7 @@ function renderShoppingList() {
     );
   }
 }
-renderShoppingList();
+renderShoppingList(shoppingList);
 
 function onRemoveCard(event) {
   // let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
@@ -645,6 +650,6 @@ function onRemoveCard(event) {
 
   //   console.log(LocalStorageData);
 
-  renderShoppingList();
+  renderShoppingList(LocalStorageData);
 }
 /* |=========================|  |=========================| */
