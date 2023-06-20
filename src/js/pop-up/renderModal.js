@@ -19,11 +19,7 @@ function renderBook(id, book_image, title, author, description, buy_links) {
   const apple = buy_links.find(buy_link => buy_link.name === 'Apple Books');
   const bookshop = buy_links.find(buy_link => buy_link.name === 'Bookshop');
 
-  if(!book_image) {
-    book_image = NoImageAvailable;
-  }
-  
-  if(!title) {
+if(!title) {
 title = 'book title';
   }
   
@@ -35,7 +31,7 @@ author = 'book author';
     description = 'No description for this book yet.';
   }
 
-  const markup = `<img class="pop-up-book-img" src="${book_image}" alt="${title}"><div class="pop-up-wrap" id="${id}"><h2 class="pop-up-book-title">${title}</h2><p class="pop-up-book-author">${author}</p><p class="pop-up-book-desc">${description}</p><ul class="pop-up-buy-list">
+  const markup = `<img class="pop-up-book-img" src="${book_image}" alt="${title}" onerror="this.src=${NoImageAvailable}" loading="lazy"><div class="pop-up-wrap" id="${id}"><h2 class="pop-up-book-title">${title}</h2><p class="pop-up-book-author">${author}</p><p class="pop-up-book-desc">${description}</p><ul class="pop-up-buy-list">
 <li>
     <a href="${amazon.url}" target="_blank">
     <picture class="pop-up-buy-img">
