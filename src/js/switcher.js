@@ -12,9 +12,7 @@ checkbox.addEventListener('change', function () {
   if (this.checked) {
     blackTheme();
   } else {
-    header.classList.remove('black-theme-header');
-    body.classList.remove('black-theme-body');
-    saveToLocalStoradge('darkModeEnabled', false);
+    whiteTheme();
   }
 });
 
@@ -29,4 +27,9 @@ function blackTheme() {
   header.classList.add('black-theme-header');
   body.classList.add('black-theme-body');
   saveToLocalStoradge('darkModeEnabled', true);
+}
+function whiteTheme() {
+  header.classList.remove('black-theme-header');
+  body.classList.remove('black-theme-body');
+  saveToLocalStoradge('darkModeEnabled', false);
 }
