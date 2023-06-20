@@ -6,7 +6,7 @@ let currentPage = 1;
 const container = document.getElementById('tui-pagination-container');
 
 export function createPagination() {
-  const shoppingList = loadFromLocalStoradge('shopping list');
+  const shoppingList = loadFromLocalStoradge('shopping-list');
 
   const paginationOptions = {
     totalItems: shoppingList.length,

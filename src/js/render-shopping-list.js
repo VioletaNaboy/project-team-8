@@ -602,7 +602,7 @@ const testBookArr = [
     __v: 0,
   },
 ];
-saveToLocalStoradge('shopping list', testBookArr);
+// saveToLocalStoradge('shopping-list', testBookArr);
 // renderShoppingList(testBookArr);
 /* |=========================| Тестовий запит |=========================| */
 
@@ -613,7 +613,7 @@ const shoppingListCardRef = document.querySelectorAll(
   '.shopping-list-remove-btn'
 );
 
-const shoppingList = loadFromLocalStoradge('shopping list');
+const shoppingList = loadFromLocalStoradge('shopping-list');
 export function renderShoppingList(dataArr) {
   //   const shoppingList = JSON.parse(localStorage.getItem('shopping list'));
   //   const shoppingList = loadFromLocalStoradge('shopping list');
@@ -637,17 +637,18 @@ export function renderShoppingList(dataArr) {
     );
   }
 }
+createPagination();
 // renderShoppingList(shoppingList);
 
 function onRemoveCard(event) {
   // let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
-  let LocalStorageData = loadFromLocalStoradge('shopping list');
+  let LocalStorageData = loadFromLocalStoradge('shopping-list');
 
   const id = event.currentTarget.id;
 
   LocalStorageData = LocalStorageData.filter(({ _id }) => _id !== id);
 
-  localStorage.setItem('shopping list', JSON.stringify(LocalStorageData));
+  localStorage.setItem('shopping-list', JSON.stringify(LocalStorageData));
 
   //   console.log(LocalStorageData);
 
