@@ -602,16 +602,16 @@ const testBookArr = [
 /* |=========================| Тестовий запит |=========================| */
 
 /* |=========================| Робочий код |=========================| */
-// localStorage.setItem('shopping list', JSON.stringify(testBookArr));
+// localStorage.setItem('shopping-list', JSON.stringify(testBookArr));
 
-saveToLocalStoradge('shopping list', testBookArr);
+saveToLocalStoradge('shopping-list', testBookArr);
 const shoppingListCardRef = document.querySelectorAll(
   '.shopping-list-remove-btn'
 );
 
 function renderShoppingList() {
-  //   const shoppingList = JSON.parse(localStorage.getItem('shopping list'));
-  const shoppingList = loadFromLocalStoradge('shopping list');
+  //   const shoppingList = JSON.parse(localStorage.getItem('shopping-list'));
+  const shoppingList = loadFromLocalStoradge('shopping-list');
 
   shoppingListEl.innerHTML = '';
 
@@ -634,14 +634,14 @@ function renderShoppingList() {
 renderShoppingList();
 
 function onRemoveCard(event) {
-  // let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
-  let LocalStorageData = loadFromLocalStoradge('shopping list');
+  // let LocalStorageData = JSON.parse(localStorage.getItem('shopping-list'));
+  let LocalStorageData = loadFromLocalStoradge('shopping-list');
 
   const id = event.currentTarget.id;
 
   LocalStorageData = LocalStorageData.filter(({ _id }) => _id !== id);
 
-  localStorage.setItem('shopping list', JSON.stringify(LocalStorageData));
+  localStorage.setItem('shopping-list', JSON.stringify(LocalStorageData));
 
   //   console.log(LocalStorageData);
 
