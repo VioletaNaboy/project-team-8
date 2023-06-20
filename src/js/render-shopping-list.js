@@ -1,4 +1,6 @@
 import { loadFromLocalStoradge, saveToLocalStoradge } from './localStorageApi';
+import { createPagination } from './pagination';
+
 import createMarkupLibraryCard from './shopping-list-card';
 
 const shoppingListEl = document.querySelector('.shopping-list-cards');
@@ -6,7 +8,7 @@ const emptyShoppingListEl = document.querySelector('.empty-shopping-list');
 const paginationContainerEl = document.getElementById(
   'tui-pagination-container'
 );
-
+createPagination();
 /* |=========================| Тестовий масив |=========================| */
 // function renderShoppingList(arr) {
 //   const shoppingListCard = arr
@@ -600,14 +602,13 @@ const testBookArr = [
     __v: 0,
   },
 ];
-
+saveToLocalStoradge('shopping list', testBookArr);
 // renderShoppingList(testBookArr);
 /* |=========================| Тестовий запит |=========================| */
 
 /* |=========================| Робочий код |=========================| */
 // localStorage.setItem('shopping list', JSON.stringify(testBookArr));
 
-saveToLocalStoradge('shopping list', testBookArr);
 const shoppingListCardRef = document.querySelectorAll(
   '.shopping-list-remove-btn'
 );
@@ -636,7 +637,7 @@ export function renderShoppingList(dataArr) {
     );
   }
 }
-renderShoppingList(shoppingList);
+// renderShoppingList(shoppingList);
 
 function onRemoveCard(event) {
   // let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
@@ -650,6 +651,7 @@ function onRemoveCard(event) {
 
   //   console.log(LocalStorageData);
 
-  renderShoppingList(LocalStorageData);
+  //   renderShoppingList(LocalStorageData);
+  createPagination();
 }
 /* |=========================|  |=========================| */
