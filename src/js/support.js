@@ -96,8 +96,6 @@ const observerFunds = new IntersectionObserver(
     rootMargin: '0px',
   }
 );
-console.log(observerFunds);
-
 function renderOnPageLoaded() {
   const markup = funds
     .map(({ img, imgRetina, url, title }, index) => {
