@@ -136,10 +136,11 @@ function onDownBtnClick() {
 function onUpBtnClick() {
   btnDown.style.display = 'block';
   btnUp.style.display = 'none';
+
+  observerFunds.unobserve(fundsList.lastElementChild);
+
   rootElement.scrollTo({
     top: 0,
     behavior: 'smooth',
   });
 }
-
-observerFunds.unobserve(fundsList.lastElementChild);
