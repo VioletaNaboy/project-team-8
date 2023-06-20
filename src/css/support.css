@@ -1,10 +1,8 @@
-/* body {
-  font-size: medium;
-} */
 .support-block {
   width: 335px;
   height: 352px;
   padding-left: 40px;
+  padding-right: 40px;
   padding-top: 24px;
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
@@ -22,39 +20,58 @@
   gap: 12px;
   margin-bottom: 40px;
 }
+
 .support-header {
-  /* font-family: 'DM Sans'; */
+  font-family: 'DM Sans';
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;
 }
-.support-header-svg {
-  fill: #ffffff;
-}
+
 .support-funds-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 159px;
 }
+
 .fund-item {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .fund-number {
-  /* font-family: 'DM Sans'; */
+  font-family: 'DM Sans';
   font-size: 14px;
   line-height: 18px;
 }
+
 .fund-link {
   display: inline-block;
 }
+
 .support-funds-visible {
   height: 188px;
   margin-bottom: 16px;
   overflow: auto;
   scroll-behavior: smooth;
+}
+
+.fund-img {
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+  height: 32px;
+  transition: transform 500ms ease-in;
+}
+
+.fund-img:hover {
+  transform: scale(1.15);
+}
+
+.fund-img:active,
+.fund-img:focus {
+  transform: scale(0.85);
 }
 
 .support-slider-btn {
@@ -64,12 +81,21 @@
   background-color: #ffffff;
   border-radius: 50%;
   border: none;
-
-  cursor: pointer;
   margin: 0 auto;
+  transition: transform 500ms ease-in-out;
 }
-.support-slider-svg {
-  fill: #4f2ee8;
+
+.support-slider-btn:hover,
+.support-slider-btn:focus {
+  transform: scale(1.15);
+}
+
+.support-slider-svg-up {
+  transform: rotate(180deg);
+}
+
+.invisible {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -86,7 +112,12 @@
   .support-funds-visible {
     margin-bottom: 32px;
   }
+  .slider-icon {
+    width: 13px;
+    height: 7px;
+  }
 }
+
 @media screen and (min-width: 1440px) {
   .support-block {
     width: 356px;
@@ -95,21 +126,4 @@
   .support-funds-visible {
     margin-bottom: 40px;
   }
-}
-
-.fund-img {
-  filter: brightness(0) invert(1);
-  object-fit: contain;
-  height: 32px;
-}
-.fund-img {
-  transition: transform 500ms ease-in;
-}
-.fund-img:hover {
-  transform: scale(1.15);
-}
-
-.fund-img:active,
-.fund-img:focus {
-  transform: scale(0.85);
 }

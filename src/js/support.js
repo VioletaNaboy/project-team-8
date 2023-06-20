@@ -1,5 +1,3 @@
-// document.addEventListener('DOMContentLoaded', renderOnPageLoaded);
-
 import action1x from '../img/support/action@1x.png';
 import action2x from '../img/support/action@2x.png';
 import hope1x from '../img/support/hope@1x.png';
@@ -20,6 +18,10 @@ import world1x from '../img/support/world@1x.png';
 import world2x from '../img/support/world@2x.png';
 
 const fundsList = document.querySelector('.support-funds-list');
+const btnDown = document.querySelector('#btn-down');
+const btnUp = document.querySelector('#btn-up');
+const rootElement = document.querySelector('.support-funds-visible');
+
 const funds = [
   {
     title: 'Save the Children',
@@ -77,6 +79,25 @@ const funds = [
   },
 ];
 
+const observerFunds = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        btnDown.style.display = 'none';
+        btnUp.style.display = 'block';
+      } else {
+        btnDown.style.display = 'block';
+        btnUp.style.display = 'none';
+      }
+    });
+  },
+  {
+    root: document.querySelector('.support-funds-visible'),
+    rootMargin: '0px',
+  }
+);
+console.log(observerFunds);
+
 function renderOnPageLoaded() {
   const markup = funds
     .map(({ img, imgRetina, url, title }, index) => {
@@ -98,6 +119,29 @@ function renderOnPageLoaded() {
     })
     .join('');
   fundsList.insertAdjacentHTML('beforeend', markup);
+  observerFunds.observe(fundsList.lastElementChild);
 }
 renderOnPageLoaded();
-// export {};
+
+btnDown.addEventListener('click', onDownBtnClick);
+btnUp.addEventListener('click', onUpBtnClick);
+
+function onDownBtnClick() {
+  btnDown.style.display = 'none';
+  btnUp.style.display = 'block';
+  rootElement.scrollBy({
+    top: 300,
+    behavior: 'smooth',
+  });
+}
+
+function onUpBtnClick() {
+  btnDown.style.display = 'block';
+  btnUp.style.display = 'none';
+  rootElement.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
+observerFunds.unobserve(guard);
