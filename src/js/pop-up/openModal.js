@@ -1,8 +1,8 @@
-import { getDataBooksById } from "./getDataBooksById";
+import { getDataBooksById } from './getDataBooksById';
+import { checkBook } from './addBookStorage';
 
 const refs = {
-  // Додати клас контейнера книжок, коли буде розмітка
-  galleryBooks: document.querySelector('body'),
+  galleryBooks: document.querySelector('.catalog'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
   bookInfo: document.querySelector('.pop-up-book-info'),
@@ -13,17 +13,17 @@ refs.galleryBooks.addEventListener('click', onGalleryBookClick);
 refs.closeModalBtn.addEventListener('click', closeModal);
 refs.modal.addEventListener('click', closeOnBackdrop);
 
-function onGalleryBookClick (evt) {
-  const id = evt.target.id;
-  
-  // Додати клас контейнера книжки
-    if (!evt.target.classList.contains('img-book')) {
-        return;
-    }
-    
-    getDataBooksById(id);
-    openModal();
-    }
+function onGalleryBookClick(evt) {
+  if (!evt.target.closest('.card')) {
+    return;
+  }
+
+  const id = evt.target.closest('.card').id;
+
+  getDataBooksById(id);
+  checkBook(id);
+  openModal();
+}
 
 function toggleModal() {
   refs.modal.classList.toggle('is-hidden');
@@ -54,6 +54,6 @@ function closeOnBackdrop(e) {
   closeModal();
 }
 
-  function clearBookInfo() {
-    refs.bookInfo.innerHTML = '';
-  }
+function clearBookInfo() {
+  refs.bookInfo.innerHTML = '';
+}

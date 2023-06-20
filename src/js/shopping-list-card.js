@@ -64,7 +64,7 @@ export default function createMarkupLibraryCard({
                   <img
                     src="${iconAmazonDesk}"
                     alt="icon amazon"
-                    class="shopping-list-shop-icone"
+                    class="shopping-list-shop-icone amazone"
                     loading="lazy"
                   />
                 </picture>

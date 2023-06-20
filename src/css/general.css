@@ -19,18 +19,7 @@ body {
 .sidebar-sl {
   display: none;
 }
-.black-theme {
-}
-body.black-theme-body {
-  background: #202024;
-  color: rgba(255, 255, 255, 0.6);
-}
-.header.black-theme-header {
-  background: #111111;
-  border: 1.5px solid white;
-  stroke: #ffffff;
-  color: #ffffff;
-}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 776px;
