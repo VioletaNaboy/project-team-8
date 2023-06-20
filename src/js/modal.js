@@ -1,6 +1,7 @@
+
 const modal = document.querySelector('.modal');
-const closeButton = document.querySelector('.icon-close');
-const openButton = document.querySelector('.open-modal');
+const closeButton = modal.querySelector('.icon-close');
+const openButton = document.querySelector('.open-modal-btn');
 
 export function openModal() {
   modal.style.display = 'block';
