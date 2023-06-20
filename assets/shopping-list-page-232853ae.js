@@ -1,4 +1,4 @@
-import{N as c,i as r,a as k,b as F,c as b,d as i,e as m,f as B,g as _,h as n,j as g,k as A,l as y,s as f,m as l}from"./renderModal-dd062a82.js";const T="/project-team-8/assets/sprite-shopping-list-134bef00.svg";function D({_id:e,title:o,list_name:a,author:t,book_image:h,description:w,buy_links:u}){const s=E(u);return`<div class="shopping-list-card" id="${e}">
+import{N as c,i as r,a as k,b as F,c as b,d as i,e as m,f as B,g as _,h as n,j as g,k as A,l as y,s as f,m as l}from"./renderModal-27737501.js";const T="/project-team-8/assets/sprite-shopping-list-134bef00.svg";function D({_id:e,title:o,list_name:a,author:t,book_image:h,description:w,buy_links:u}){const s=E(u);return`<div class="shopping-list-card" id="${e}">
       <button class="shopping-list-remove-btn" type="button" id="${e}">
         <svg class="shopping-list-remove-icone" width="18" height="18">
           <use href="${T}#icon-trash"></use>
