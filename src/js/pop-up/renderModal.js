@@ -19,15 +19,15 @@ function renderBook(id, book_image, title, author, description, buy_links) {
   const apple = buy_links.find(buy_link => buy_link.name === 'Apple Books');
   const bookshop = buy_links.find(buy_link => buy_link.name === 'Bookshop');
 
-if(!title) {
-title = 'book title';
+  if (!title) {
+    title = 'book title';
   }
-  
-  if(!author) {
-author = 'book author';
+
+  if (!author) {
+    author = 'book author';
   }
-  
-  if(!description) {
+
+  if (!description) {
     description = 'No description for this book yet.';
   }
 
@@ -47,6 +47,7 @@ author = 'book author';
                     src="${iconAmazonDesk}"
                     alt="${amazon.name}"
                     loading="lazy"
+                    class="amazone"
                   />
                 </picture></a>
 </li>
@@ -89,6 +90,6 @@ author = 'book author';
 </ul></div>`;
 
   modal.insertAdjacentHTML('beforeend', markup);
-};
+}
 
 export { renderBook };

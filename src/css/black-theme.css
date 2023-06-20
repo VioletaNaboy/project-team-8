@@ -1,0 +1,45 @@
+body.black-theme-body {
+  background: #202024;
+  color: #ffffff;
+}
+.black-theme-body button {
+  color: #ffffff;
+}
+.black-theme-body .shopping-list-card {
+  background: #111111;
+  color: #ffffff;
+}
+.black-theme-body h1 {
+  color: #ffffff;
+}
+.black-theme-body .category_list,
+.black-theme-body .category_title {
+  color: rgba(255, 255, 255, 0.6);
+}
+.black-theme-body .category_list:focus,
+.black-theme-body .category_title:focus,
+.black-theme-body .category_list:hover,
+.black-theme-body .category_title:hover {
+  color: #eac645;
+}
+
+.black-theme-body .pop-up-modal {
+  background: #202024;
+  border: 2px solid #ffffff;
+}
+.black-theme-body .icon {
+  stroke: #ffffff;
+}
+.black-theme-body .icon:hover,
+.black-theme-body .icon:focus {
+  stroke: #4f2ee8;
+}
+.black-theme-body .amazone {
+  filter: brightness(0) invert(1);
+}
+.header.black-theme-header {
+  background: #111111;
+  border: 1.5px solid white;
+  stroke: #ffffff;
+  color: #ffffff;
+}
