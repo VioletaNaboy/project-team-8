@@ -74,7 +74,7 @@ const testBookArr = [
   },
   {
     _id: '643282b1e85766588626a0d6',
-    list_name: 'Business Books',
+    list_name: 'Business Books jfkhgfdlsfjdsfkljds;lfjdeslfjd;s',
     date: '2023-04-01T00:00:00.000Z',
     age_group: '',
     amazon_product_url: 'https://www.amazon.com/dp/0593239911?tag=NYTBSREV-20',
@@ -662,7 +662,6 @@ function onRemoveCard(event) {
   localStorage.setItem('shopping-list', JSON.stringify(LocalStorageData));
 
   //   renderShoppingList(LocalStorageData);
-  //   console.log('ccc', currentPage);
   shoppingListEl.innerHTML = '';
   createPagination();
 }
