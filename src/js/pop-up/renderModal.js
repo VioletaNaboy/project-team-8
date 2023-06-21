@@ -33,8 +33,8 @@ function renderBook(id, book_image, title, author, description, buy_links) {
 
   const markup = `<img class="pop-up-book-img" src="${book_image}" alt="${title}" onerror="this.src=${NoImageAvailable}" loading="lazy"><div class="pop-up-wrap" id="${id}"><h2 class="pop-up-book-title">${title}</h2><p class="pop-up-book-author">${author}</p><p class="pop-up-book-desc">${description}</p><ul class="pop-up-buy-list">
 <li>
-    <a href="${amazon.url}" target="_blank">
-    <picture class="pop-up-buy-img">
+    <a class='pop-up-buylink' href="${amazon.url}" target="_blank">
+    <picture width="62" height="19">
                   <source
                     srcset="${iconAmazonDesk} 1x, ${iconAmazonDesk2} 2x"
                     media="(min-width: 768px)"
@@ -47,13 +47,13 @@ function renderBook(id, book_image, title, author, description, buy_links) {
                     src="${iconAmazonDesk}"
                     alt="${amazon.name}"
                     loading="lazy"
-                    class="amazone"
+                    width="62" height="19"
                   />
                 </picture></a>
 </li>
 <li>
-    <a href="${apple.url}" target="_blank">
-    <picture class="pop-up-buy-img">
+    <a class='pop-up-buylink' href="${apple.url}" target="_blank">
+    <picture width="33" height="32">
                   <source
                     srcset="${iconAppleBooksDesk} 1x, ${iconAppleBooksDesk2} 2x"
                     media="(min-width: 768px)"
@@ -66,12 +66,13 @@ function renderBook(id, book_image, title, author, description, buy_links) {
                     src="${iconAppleBooksDesk}"
                     alt="${apple.name}"
                     loading="lazy"
+                    width="33" height="32"
                   />
                 </picture></a>
 </li>
 <li>
-    <a href="${bookshop.url}" target="_blank">
-    <picture class="pop-up-buy-img">
+    <a class='pop-up-buylink' href="${bookshop.url}" target="_blank">
+    <picture width="38" height="36">
                   <source
                     srcset="${iconBooksShopDesk} 1x, ${iconBooksShopDesk2} 2x"
                     media="(min-width: 768px)"
@@ -84,6 +85,7 @@ function renderBook(id, book_image, title, author, description, buy_links) {
                     src="${iconBooksShopDesk}"
                     alt="${bookshop.name}"
                     loading="lazy"
+                    width="38" height="36"
                   />
                 </picture></a>
 </li>
