@@ -8,4 +8,4 @@ import './js/pop-up/openModal';
 import './js/pop-up/getDataBooksById';
 import "./js/scroll-up.js"
 import './js/pop-up/addBookStorage.js';
-
+import './js/loader.js';
