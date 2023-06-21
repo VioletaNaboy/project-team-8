@@ -4,20 +4,23 @@
   border-radius: 18px;
   width: 579px;
   height: 516px;
+
   margin: 0 auto;
   margin-top: 127px;
   padding: 20px;
+  position: fixed; 
+ 
 }
 
 @media only screen and (max-width: 767px) {
   .modal-content {
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    max-width: 335px;
+    height: auto;
     margin-top: 10%;
     background-color: #111111;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .modal-content {
     width: 768px;
@@ -46,12 +49,13 @@
   border: 2px solid #111111;
   background: #111111;
   border-radius: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 767px) {
   .form-btn {
-    width: 90%;
+    width: 294px;
+    height: 50px;
     background-color: #f6f6f6;
   }
 }
@@ -71,11 +75,13 @@
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #111111;
+  padding: 22px;
 }
 
 @media only screen and (max-width: 767px) {
   .form-name {
-    width: 90%;
+    width: 294px;
+    height: 50px;
     margin-left: 5%;
     background-color: #111111;
     border: 2px solid #f6f6f6;
@@ -126,7 +132,7 @@
 }
 @media only screen and (min-width: 767px) {
   .btn-text {
-    color: #f3f3f3;
+    color: #f6f6f6;
   }
 }
 
@@ -152,6 +158,8 @@
     fill: #f3f3f3;
   }
   .icon-close path {
+    top: 19px;
+    right: 196px;
     stroke: #f3f3f3;
   }
 }
@@ -159,9 +167,10 @@
 .icon-close {
   fill: #111111;
   position: absolute;
-  top: 31px;
-  right: 31px;
+  top: 20px;
+  right: 20px;
   transform: translateY(-50%);
+ 
 }
 
 .icon-close:hover path {
@@ -183,8 +192,16 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  opacity: 0,5;
 
+  opacity: 0, 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+.body{
+  max-height: 100vh;
+  overflow: hidden;
+}
+

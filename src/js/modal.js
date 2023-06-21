@@ -20,3 +20,4 @@ window.addEventListener('click', function (event) {
     closeModal();
   }
 });
+
