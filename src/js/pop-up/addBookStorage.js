@@ -4,46 +4,76 @@ import { getArrBookId } from './getDataBooksById';
 const addBookBtn = document.querySelector('.pop-up-modal-btn');
 addBookBtn.addEventListener('click', onAddBtnClick);
 
-const shoppingListKey = 'shopping-list';
-const shoppingListBookIds = [];
+export default class StorageBooks {
+  constructor() {
+    this.key = 'shopping-list';
+    this.objectBooks = [];
+    this.arrayIds = [];
+    this.currentBookKey = 'current-book';
+    this.currentBookId = '';
+    this.savedObject = loadFromLocalStoradge(this.key);
+  }
 
-const currentBookKey = 'current-book';
+  getArrayIds() {
+this.arrayIds = this.objectBooks.map(
+  bookId => bookId._id
+); 
+  }
+
+  setCurrentBookId() {
+    this.currentBookId = loadFromLocalStoradge(this.currentBookKey);
+  }
+
+  getCurrentIds() {
+    this.arrayIds = this.savedObject.map(
+      bookId => bookId._id
+    ); 
+  }
+}
+
+const storageBooks = new StorageBooks();
 
 function checkBook(id) {
-  const objectBookIds = shoppingListBookIds.map(
-    shoppingListBookId => shoppingListBookId._id
-  );
-  saveToLocalStoradge(currentBookKey, id);
   addBookBtn.textContent = 'Add to shopping list';
+  saveToLocalStoradge(storageBooks.currentBookKey, id);
 
-  if (objectBookIds.includes(id)) {
+if(storageBooks.savedObject) {
+  storageBooks.objectBooks = storageBooks.savedObject;
+  storageBooks.getCurrentIds();
+}
+
+  storageBooks.getArrayIds();
+
+  if (storageBooks.arrayIds.includes(id)) {
     addBookBtn.textContent = 'remove from the shopping list';
   }
 }
 
 async function onAddBtnClick() {
-  const currentBookId = loadFromLocalStoradge(currentBookKey);
-  const objectBookIds = shoppingListBookIds.map(
-    shoppingListBookId => shoppingListBookId._id
-  );
+  storageBooks.setCurrentBookId()
 
-  if (objectBookIds.includes(currentBookId)) {
-    removeBtnClick(currentBookId, objectBookIds);
+  if(storageBooks.savedObject) {
+    storageBooks.objectBooks = storageBooks.savedObject;
+    storageBooks.getCurrentIds();
+  }
+
+  if (storageBooks.arrayIds.includes(storageBooks.currentBookId)) {
+     removeBtnClick();
   } else {
-    const objectBook = await getArrBookId(currentBookId);
+    const objectBook = await getArrBookId(storageBooks.currentBookId);
 
-    shoppingListBookIds.push(objectBook);
-    saveToLocalStoradge(shoppingListKey, shoppingListBookIds);
+    storageBooks.objectBooks.push(objectBook);
+    saveToLocalStoradge(storageBooks.key, storageBooks.objectBooks);
 
     addBookBtn.textContent = 'remove from the shopping list';
   }
 }
 
-function removeBtnClick(currentBookId, objectBookIds) {
-  const indexBook = objectBookIds.indexOf(currentBookId);
+function removeBtnClick() {
+  const indexBook = storageBooks.arrayIds.indexOf(storageBooks.currentBookId);
 
-  shoppingListBookIds.splice(indexBook, 1);
-  saveToLocalStoradge(shoppingListKey, shoppingListBookIds);
+  storageBooks.objectBooks.splice(indexBook, 1);
+  saveToLocalStoradge(storageBooks.key, storageBooks.objectBooks);
   addBookBtn.textContent = 'Add to shopping list';
 }
 
