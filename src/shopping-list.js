@@ -5,3 +5,4 @@ import './js/shopping-list-card';
 import './js/render-shopping-list';
 import './js/pop-up/getDataBooksById';
 import './js/modal.js';
+import './js/pagination.js';
