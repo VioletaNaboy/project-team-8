@@ -124,6 +124,8 @@
     padding-bottom: 20px;
     padding-left: 20px;
 
+    z-index: 5;
+
     /* margin-top: 30px; */
   }
   .account-in__user {
@@ -154,6 +156,8 @@
     margin-top: 126px;
     margin-left: auto;
     margin-right: auto;
+
+    z-index: 5;
   }
   .account-in__nav-header {
     display: flex;
@@ -234,11 +238,8 @@
   position: absolute;
   bottom: -150px;
   right: 0;
-  left: 0;
-  /* top: 0; */
+  left: 50px;
 
-  /* margin-left: auto;
-  margin-right: auto; */
   margin: auto;
   transform: rotate(-15deg);
 }
