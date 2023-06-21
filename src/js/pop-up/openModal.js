@@ -1,5 +1,5 @@
 import { getDataBooksById } from './getDataBooksById';
-import { checkBook } from './addBookStorage';
+import { checkBookInStorage } from './addBookStorage';
 
 const refs = {
   galleryBooks: document.querySelector('.catalog'),
@@ -13,15 +13,18 @@ refs.galleryBooks.addEventListener('click', onGalleryBookClick);
 refs.closeModalBtn.addEventListener('click', closeModal);
 refs.modal.addEventListener('click', closeOnBackdrop);
 
+let id = '';
+
 function onGalleryBookClick(evt) {
+  
   if (!evt.target.closest('.card')) {
     return;
   }
 
-  const id = evt.target.closest('.card').id;
+  id = evt.target.closest('.card').id;
 
   getDataBooksById(id);
-  checkBook(id);
+  checkBookInStorage();
   openModal();
 }
 
@@ -57,3 +60,5 @@ function closeOnBackdrop(e) {
 function clearBookInfo() {
   refs.bookInfo.innerHTML = '';
 }
+
+export { id }
