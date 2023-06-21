@@ -4,7 +4,7 @@ import { getArrBookId } from './getDataBooksById';
 const addBookBtn = document.querySelector('.pop-up-modal-btn');
 const removeTxt = document.querySelector('.pop-up-remove-txt');
 addBookBtn.addEventListener('click', onAddBtnClick);
-// Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.
+
 export default class StorageBooks {
   constructor() {
     this.key = 'shopping-list';
