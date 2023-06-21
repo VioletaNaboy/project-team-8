@@ -263,8 +263,6 @@
   .account-bcg__img {
     position: absolute;
     top: 75%;
-    min-width: 450px;
-    min-height: 439px;
     width: calc(100vw + 75px);
     height: calc(100vw + 64px);
     left: -15px;
