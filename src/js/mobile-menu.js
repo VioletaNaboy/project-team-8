@@ -5,7 +5,7 @@ if (mobileMenuOpenIconEl) {
     '.mobile-menu-container__account-in'
   );
   const mobileMenuContainerEl = document.querySelector(
-    '.mobile-menu-container'
+    '.mobile-menu-container__in'
   );
 
   mobileMenuOpenIconEl.addEventListener('click', function (e) {

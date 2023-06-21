@@ -1,6 +1,6 @@
 /* Maksym */
 
-.mobile-menu-container {
+.mobile-menu-container__in {
   display: none;
 }
 
@@ -100,7 +100,7 @@
 
   /* --------- кнопка бургер-меню "відкрити" ----------- */
 
-  .mobile-menu-container {
+  .mobile-menu-container__in {
     position: fixed;
     top: 0;
     right: 0;
@@ -115,7 +115,7 @@
     overflow-y: scroll;
   }
 
-  .mobile-menu-container._active-menu {
+  .mobile-menu-container__in._active-menu {
     display: block;
     transform: translatex(0%);
   }
