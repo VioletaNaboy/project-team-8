@@ -4,12 +4,13 @@ import {
   getBooksByCategory,
   getBookById,
 } from './apiService';
-
+import { showLoader, hideLoader } from './loader.js';
 const list = document.querySelector('.category__list');
 const catalog = document.querySelector('.catalog');
 const allCategories = document.querySelector('.category_title');
 
 const renderTopBooks = (topBooks, object) => {
+  hideLoader();
   object.insertAdjacentHTML(
     'beforeend',
     `${topBooks.data
@@ -42,7 +43,7 @@ const renderTopBooks = (topBooks, object) => {
       .join('')}`
   );
 };
-
+showLoader();
 getTopBooks().then(result => {
   renderTopBooks(result, catalog);
   const seeBtn = document.querySelectorAll('.see-more');
@@ -69,16 +70,19 @@ getTopBooks().then(result => {
 
 allCategories.addEventListener('click', async () => {
   catalog.innerHTML = '';
+  showLoader();
   catalog.insertAdjacentHTML(
     'afterbegin',
     `<h1 class="catalog-header">Best Seller <span>Books</span></h1>`
   );
+
   const topBooks = await getTopBooks();
   renderTopBooks(topBooks, catalog);
 });
 
 const renderSelectCategoryInObject = (category, object) => {
   getBooksByCategory(category).then(result => {
+    hideLoader();
     object.insertAdjacentHTML(
       'beforeend',
       `<div class="gallery-select">${result.data
@@ -106,6 +110,7 @@ list.addEventListener('click', e => {
     return;
   }
   catalog.innerHTML = '';
+  showLoader();
   let categoryName = e.target.getAttribute('name');
   let categoryStrList = categoryName.split(' ');
   let categoryLastSpan = `<span>${
