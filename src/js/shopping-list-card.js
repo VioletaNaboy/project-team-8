@@ -1,5 +1,5 @@
 import sprite from '../img/shopping-list/sprite-shopping-list.svg';
-import NoImageAvailable from '../img/shopping-list/No-Image-Available-116-165.jpg';
+import noBookDesk from '../img/shopping-list/no-book-desktop.jpg';
 import iconAmazonDesk from '../img/shopping-list/icon-amazon-desktop.png';
 import iconAmazonDesk2 from '../img/shopping-list/icon-amazon-desktop@2x.png';
 import iconAmazonMobile from '../img/shopping-list/icon-amazon-mobile.png';
@@ -31,7 +31,7 @@ export default function createMarkupLibraryCard({
         </svg>
       </button>
       <img
-        src="${book_image}" onerror="this.src=${NoImageAvailable}"
+        src="${book_image}" onerror="this.src=${noBookDesk}"
         alt="${title}"
         class="shopping-list-book-image"
         width="116"
@@ -64,7 +64,7 @@ export default function createMarkupLibraryCard({
                   <img
                     src="${iconAmazonDesk}"
                     alt="icon amazon"
-                    class="shopping-list-shop-icone"
+                    class="shopping-list-shop-icone amazone"
                     loading="lazy"
                   />
                 </picture>
