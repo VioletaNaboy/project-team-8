@@ -85,8 +85,15 @@
 
   .mobile-menu-container__account-in {
     z-index: 5;
-    width: 100%;
-    height: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
+    width: 100vw;
+    height: 100vh;
 
     /* position: fixed;
     top: 0; */
@@ -100,6 +107,7 @@
 
   /* ---- Фото та Ім'я користувача ---- */
   .account-in {
+    max-width: 480px;
     min-height: 100%;
 
     display: flex;
@@ -108,8 +116,12 @@
     justify-content: space-between;
 
     margin-top: 54px;
+    margin-left: auto;
+    margin-right: auto;
 
     padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     padding-left: 20px;
 
     /* margin-top: 30px; */
@@ -119,8 +131,8 @@
     align-items: center;
     gap: 9px;
   }
-  .account-in__user-img {
-  }
+  /* .account-in__user-img {
+  } */
   .account-in__user-name {
     font-weight: 700;
     font-size: 22px;
@@ -178,10 +190,59 @@
 
 /* ---- Кнопка "log out" ---- */
 .account-btn__log-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  width: 118px;
+  padding: 14px 24px;
+  margin-top: 290px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.04em;
+
+  color: #111111;
+
+  background: #ffffff;
+  border: 1.5px solid #111111;
+  border-radius: 18px;
+
+  z-index: 5;
 }
 .account-btn__log-out-icon {
+  width: 13.33px;
+  stroke: #eac645;
+  fill: transparent;
 }
 /* ---- Кнопка "log out" ---- */
+
+/* ---- Картинка на бекграунді ---- */
+/* .account-bcg__container {
+  position: absolute;
+  bottom: -400px;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  transform: rotate(-15deg);
+} */
+.account-bcg__img {
+  position: absolute;
+  bottom: -150px;
+  right: 0;
+  left: 0;
+  /* top: 0; */
+
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: auto;
+  transform: rotate(-15deg);
+}
+/* ---- Картинка на бекграунді ---- */
 
 /* 
 ----------------------------- 
