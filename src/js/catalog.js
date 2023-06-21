@@ -17,7 +17,7 @@ const renderTopBooks = (topBooks, object) => {
         item => `<div class="main-block">
   <div class="gallery-and-genre-type">
       <p class="genre-type">${item.list_name}</p>
-      <div class="gallery">
+      <div class="gallery" id="${item.list_name.split(' ').join('-')}">
      ${item.books
        .map(book => {
          return ` <div class="card" id=${book._id}><div class="wrapper"><img src="${book.book_image}" class="book-cover"><div class="overlay-box">
@@ -45,6 +45,26 @@ const renderTopBooks = (topBooks, object) => {
 
 getTopBooks().then(result => {
   renderTopBooks(result, catalog);
+  const seeBtn = document.querySelectorAll('.see-more');
+  const originHeight = document.querySelector('.gallery').clientHeight;
+  seeBtn.forEach((item, index) => {
+    item.addEventListener('click', async () => {
+      const block = document.getElementById(
+        result.data[index].list_name.split(' ').join('-')
+      );
+      if (item.textContent === 'SEE MORE') {
+        block.style.height = originHeight * 2 + 'px';
+        block.style.overflowY = 'scroll';
+        block.innerHTML = '';
+        item.textContent = 'SEE LESS';
+        renderSelectCategoryInObject(result.data[index].list_name, block);
+      } else {
+        block.style.height = originHeight + 'px';
+        block.style.overflowY = 'hidden';
+        item.textContent = 'SEE MORE';
+      }
+    });
+  });
 });
 
 allCategories.addEventListener('click', async () => {

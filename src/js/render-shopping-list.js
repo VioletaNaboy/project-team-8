@@ -1,9 +1,14 @@
 import { loadFromLocalStoradge, saveToLocalStoradge } from './localStorageApi';
+import { createPagination } from './pagination';
+
 import createMarkupLibraryCard from './shopping-list-card';
 
 const shoppingListEl = document.querySelector('.shopping-list-cards');
 const emptyShoppingListEl = document.querySelector('.empty-shopping-list');
-
+const paginationContainerEl = document.getElementById(
+  'tui-pagination-container'
+);
+createPagination();
 /* |=========================| Тестовий масив |=========================| */
 // function renderShoppingList(arr) {
 //   const shoppingListCard = arr
@@ -597,28 +602,29 @@ const testBookArr = [
     __v: 0,
   },
 ];
-
+// saveToLocalStoradge('shopping-list', testBookArr);
 // renderShoppingList(testBookArr);
 /* |=========================| Тестовий запит |=========================| */
 
 /* |=========================| Робочий код |=========================| */
 // localStorage.setItem('shopping list', JSON.stringify(testBookArr));
 
-saveToLocalStoradge('shopping list', testBookArr);
 const shoppingListCardRef = document.querySelectorAll(
   '.shopping-list-remove-btn'
 );
 
-function renderShoppingList() {
+const shoppingList = loadFromLocalStoradge('shopping-list');
+export function renderShoppingList(dataArr) {
   //   const shoppingList = JSON.parse(localStorage.getItem('shopping list'));
-  const shoppingList = loadFromLocalStoradge('shopping list');
+  //   const shoppingList = loadFromLocalStoradge('shopping list');
 
   shoppingListEl.innerHTML = '';
 
-  if (shoppingList.length === 0) {
+  if (dataArr.length === 0) {
     emptyShoppingListEl.classList.remove('display-none');
+    paginationContainerEl.classList.add('display-none');
   } else {
-    const shoppingListCard = shoppingList
+    const shoppingListCard = dataArr
       .map(card => createMarkupLibraryCard(card))
       .join('');
 
@@ -631,20 +637,22 @@ function renderShoppingList() {
     );
   }
 }
-renderShoppingList();
+createPagination();
+// renderShoppingList(shoppingList);
 
 function onRemoveCard(event) {
   // let LocalStorageData = JSON.parse(localStorage.getItem('shopping list'));
-  let LocalStorageData = loadFromLocalStoradge('shopping list');
+  let LocalStorageData = loadFromLocalStoradge('shopping-list');
 
   const id = event.currentTarget.id;
 
   LocalStorageData = LocalStorageData.filter(({ _id }) => _id !== id);
 
-  localStorage.setItem('shopping list', JSON.stringify(LocalStorageData));
+  localStorage.setItem('shopping-list', JSON.stringify(LocalStorageData));
 
   //   console.log(LocalStorageData);
 
-  renderShoppingList();
+  //   renderShoppingList(LocalStorageData);
+  createPagination();
 }
 /* |=========================|  |=========================| */
