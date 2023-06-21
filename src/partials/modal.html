@@ -1,25 +1,27 @@
 <section class="setion-container">
-  <div class="modal " id="myModal">
+  <div class="modal" data-modal id="myModal">
     <div class="modal-content">
       <div class="form-input">
         <form class="form" method="POST">
           <label for="username" class="label">
-            <svg
-              class="icon-close"
-              width="14"
-              height="14"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16 2L2 16M2 2L16 16"
-                stroke="#111111"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <button class="icon-close close-btn" data-modal-close>
+              <svg
+                class="icon-close"
+                width="14"
+                height="14"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 2L2 16M2 2L16 16"
+                  stroke="#111111"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
 
             <input
               maxlength="50"
@@ -94,12 +96,9 @@
         </form>
       </div>
       <div class="registry">
-        <a class="registry-content" href="">sign up</a>
-        <a class="registry-content" href="">sign in</a>
+        <a class="registry-content link-sign-up" id="sign-up" href="">sign up</a>
+        <a class="registry-content link-sign-in" id="sign-in" href="">sign in</a>
       </div>
     </div>
-  </div>
-  <div class="open-modal">
-    <button class="open-modal-btn">Open Modal</button>
   </div>
 </section>

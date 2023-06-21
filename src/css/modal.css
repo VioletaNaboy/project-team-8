@@ -8,8 +8,7 @@
   margin: 0 auto;
   margin-top: 127px;
   padding: 20px;
-  position: fixed; 
- 
+  position: fixed;
 }
 
 @media only screen and (max-width: 767px) {
@@ -168,9 +167,9 @@
   fill: #111111;
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 10px;
+
   transform: translateY(-50%);
- 
 }
 
 .icon-close:hover path {
@@ -200,8 +199,21 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.body{
+.body {
   max-height: 100vh;
   overflow: hidden;
+}
+
+.close-btn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+
+  color: #f6f6f6;
+  border: none;
+  border-radius: 40px;
+  padding: 20px 20px;
+  cursor: pointer;
 }
 
