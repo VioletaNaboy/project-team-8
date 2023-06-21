@@ -109,6 +109,7 @@
     position: fixed;
     top: 0;
     right: 0;
+    min-width: 375px;
     width: 100vw;
     height: 100vh;
 
@@ -263,8 +264,6 @@
   .account-bcg__img {
     position: absolute;
     top: 75%;
-    min-width: 450px;
-    min-height: 439px;
     width: calc(100vw + 75px);
     height: calc(100vw + 64px);
     left: -15px;
