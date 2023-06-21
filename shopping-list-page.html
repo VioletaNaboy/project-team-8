@@ -19,9 +19,9 @@
     
     
     
-    <script type="module" crossorigin src="/project-team-8/assets/shopping-list-page-367a8b5d.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-team-8/assets/mobile-menu-877c5555.js">
-    <link rel="stylesheet" href="/project-team-8/assets/mobile-menu-bb9f257a.css">
+    <script type="module" crossorigin src="/project-team-8/assets/shopping-list-page-2b7b42b2.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-team-8/assets/authorization-05988034.js">
+    <link rel="stylesheet" href="/project-team-8/assets/authorization-573bbcb2.css">
     <link rel="stylesheet" href="/project-team-8/assets/shopping-list-page-f509b5d8.css">
   </head>
 
@@ -39,7 +39,8 @@
     </a>
     <nav class="nav-header">
       <a class="nav-item active-hp" href="./index.html">Home</a>
-      <a class="nav-item active-sl" href="./shopping-list-page.html">Shopping List
+      <a class="nav-item active-sl" href="./shopping-list-page.html"
+        >Shopping List
         <svg width="20px" height="20px">
           <use class="logo-shop" href="/project-team-8/assets/header-8298a0f2.svg#icon-shop"></use>
         </svg>
@@ -52,20 +53,37 @@
       <label class="switcher" for="switcher"></label>
       <div class="switcher-bckgrnd"></div>
     </div>
-    <div class="user-header">
-      <div class="user-foto"></div>
-      User
-      <svg width="23px" height="26px">
-        <use class="caret-down" href="/project-team-8/assets/header-8298a0f2.svg#icon-caret-down"></use>
-      </svg>
-      <div class="sign-up-header hidden-sign-up">
+    <div class="wrapper-log-in">
+      <!-- Unauthorized user -->
+      <div class="sign-up-header">
         Sign up
         <svg width="20px" height="20px">
-          <use class="arrow-right" href="/project-team-8/assets/header-8298a0f2.svg#icon-arrow-right"></use>
+          <use
+            class="arrow-right"
+            href="/project-team-8/assets/header-8298a0f2.svg#icon-arrow-right"
+          ></use>
         </svg>
       </div>
+      <!-- Unauthorized user -->
+      <!-- Authorized user -->
+      <div class="user-header hidden">
+        <div class="user-foto"></div>
+        User
+        <svg width="23px" height="26px">
+          <use class="caret-down" href="/project-team-8/assets/header-8298a0f2.svg#icon-caret-down"></use>
+        </svg>
+      </div>
+      <div class="log-out-header hidden">
+        Log out
+        <svg width="20px" height="20px">
+          <use
+            class="arrow-right"
+            href="/project-team-8/assets/header-8298a0f2.svg#icon-arrow-right"
+          ></use>
+        </svg>
+      </div>
+      <!-- Authorized user -->
     </div>
-
     <div class="menu-header">
       <!-- ! Реалізація мобільного меню "бургер" через svg -->
       <!-- <svg width="28px" height="28px">
@@ -81,10 +99,10 @@
           <span></span>
         </div>
       </div>
-
     </div>
   </div>
 </header>
+
     <div class="container">
       <aside class="sidebar-sl">
         <!-- Olga -->
