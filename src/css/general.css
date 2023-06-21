@@ -5,7 +5,7 @@ body {
 }
 .container {
   width: 335px;
-  padding: 100px 0 80px;
+  padding: 100px 20px 80px;
   margin: 0 auto;
 }
 .sidebar-home {
@@ -23,7 +23,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     width: 776px;
-    padding: 100px 0 100px;
+    padding: 100px 32px 100px;
   }
   .sidebar-home {
     flex-direction: row;

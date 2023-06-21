@@ -146,7 +146,7 @@
   /* ---- Фото та Ім'я користувача ---- */
   .account-in {
     max-width: 480px;
-    min-height: 100%;
+    min-height: calc(100vh - 54px);
 
     display: flex;
     flex-direction: column;
@@ -229,7 +229,7 @@
   /* ---- Навігація ---- */
 
   /* ---- Кнопка "log out" ---- */
-  .account-btn__log-out {
+  .mobile-menu-container__in .account-btn__log-out {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -261,13 +261,16 @@
 
   /* ---- Картинка на бекграунді ---- */
   .account-bcg__img {
-    /* position: absolute; */
-    bottom: -150px;
-    right: 0;
-    left: 50px;
-
-    margin: auto;
+    position: absolute;
+    top: 75%;
+    min-width: 450px;
+    min-height: 439px;
+    width: calc(100vw + 75px);
+    height: calc(100vw + 64px);
+    left: -15px;
+    margin: 0 auto;
     transform: rotate(-15deg);
+    padding: 0;
   }
   /* ---- Картинка на бекграунді ---- */
   /* --------- Користувач залогінений ----------- */
