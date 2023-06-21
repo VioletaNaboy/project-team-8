@@ -1,6 +1,6 @@
 const userElHeader = document.querySelector('.user-header');
-const LogOutHeader = document.querySelector('.log-out-header');
-const SignUpHeader = document.querySelector('.sign-up-header');
+const logOutHeader = document.querySelector('.log-out-header');
+const signUpHeader = document.querySelector('.sign-up-header');
 userElHeader.addEventListener('click', () => {
-  LogOutHeader.classList.toggle('hidden');
+  logOutHeader.classList.toggle('hidden');
 });
