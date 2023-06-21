@@ -11,6 +11,9 @@
   padding: 20px;
   stroke: black;
   color: black;
+
+  position: fixed;
+  z-index: 10;
 }
 .header-wrapper {
   display: flex;
@@ -30,11 +33,21 @@
   align-items: center;
   gap: 8px;
 }
-.svg-menu {
+
+/* ! Реалізація мобільного меню "бургер" через svg */
+/* .svg-menu {
   stroke: inherit;
   cursor: pointer;
   fill: currentColor;
+} */
+/* ! Реалізація мобільного меню "бургер" через svg */
+
+/* ! Реалізація мобільного меню "бургер" через псевдоелементи з анімацією переходу в хрестик "закрити" */
+.mobile-menu__open-icon {
+  display: none;
 }
+/* ! Реалізація мобільного меню "бургер" через псевдоелементи з анімацією переходу в хрестик "закрити" */
+
 .switcher-checkbox {
   display: none;
 }
