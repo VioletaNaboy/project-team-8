@@ -18,7 +18,7 @@
   /* --------- кнопка бургер-меню "відкрити" ----------- */
   .mobile-menu__open-icon {
     display: block;
-    z-index: 10;
+    z-index: 11;
     position: relative;
     width: 21px;
     height: 20px;
@@ -163,7 +163,7 @@
     padding-bottom: 20px;
     padding-left: 20px;
 
-    z-index: 5;
+    z-index: 7;
 
     /* margin-top: 30px; */
   }
@@ -195,7 +195,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    z-index: 5;
+    z-index: 7;
   }
   .account-in__nav-header {
     display: flex;
@@ -251,7 +251,7 @@
     border: 1.5px solid #111111;
     border-radius: 18px;
 
-    z-index: 5;
+    z-index: 7;
   }
   .account-btn__log-out-icon {
     width: 13.33px;
@@ -261,16 +261,19 @@
   /* ---- Кнопка "log out" ---- */
 
   /* ---- Картинка на бекграунді ---- */
-  .account-bcg__img {
+  .account-bcg__img-container {
     position: absolute;
-    top: 75%;
+    top: 65%;
     width: calc(100vw + 75px);
     height: calc(100vw + 64px);
     left: -15px;
     margin: 0 auto;
     transform: rotate(-15deg);
     padding: 0;
-    z-index: 20;
+    z-index: 6;
+  }
+  .account-bcg__img {
+    width: 100%;
   }
   /* ---- Картинка на бекграунді ---- */
   /* --------- Користувач залогінений ----------- */
