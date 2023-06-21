@@ -1,0 +1,23 @@
+.arrow{
+    width: 55px;
+    position: fixed;
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    bottom: 60px;
+    right: 60px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #4f2ee8;
+    border: 3px solid #4f2ee8;
+    transition: 0.4s;
+}
+.arrow:hover{
+    width: 65px;
+    height: 65px;
+    font-size: 33px;
+    background-color: #4f2ee8;
+    color: white;
+}

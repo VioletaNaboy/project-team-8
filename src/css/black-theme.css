@@ -43,3 +43,9 @@ body.black-theme-body {
   stroke: #ffffff;
   color: #ffffff;
 }
+.black-theme-header .mobile-menu__span-up span,
+.black-theme-header .mobile-menu__span-down span,
+.black-theme-header .mobile-menu__open-icon::before,
+.black-theme-header .mobile-menu__open-icon::after {
+  background-color: #ffffff;
+}

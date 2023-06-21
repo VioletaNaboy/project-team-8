@@ -25,13 +25,9 @@
       <label class="switcher" for="switcher"></label>
       <div class="switcher-bckgrnd"></div>
     </div>
-    <div class="user-header">
-      <div class="user-foto"></div>
-      User
-      <svg width="23px" height="26px">
-        <use class="caret-down" href="./img/header.svg#icon-caret-down"></use>
-      </svg>
-      <div class="sign-up-header hidden-sign-up">
+    <div class="wrapper-log-in">
+      <!-- Unauthorized user -->
+      <div class="sign-up-header">
         Sign up
         <svg width="20px" height="20px">
           <use
@@ -40,12 +36,41 @@
           ></use>
         </svg>
       </div>
+      <!-- Unauthorized user -->
+      <!-- Authorized user -->
+      <div class="user-header hidden">
+        <div class="user-foto"></div>
+        User
+        <svg width="23px" height="26px">
+          <use class="caret-down" href="./img/header.svg#icon-caret-down"></use>
+        </svg>
+      </div>
+      <div class="log-out-header hidden">
+        Log out
+        <svg width="20px" height="20px">
+          <use
+            class="arrow-right"
+            href="./img/header.svg#icon-arrow-right"
+          ></use>
+        </svg>
+      </div>
+      <!-- Authorized user -->
     </div>
-
     <div class="menu-header">
-      <svg width="28px" height="28px">
+      <!-- ! Реалізація мобільного меню "бургер" через svg -->
+      <!-- <svg width="28px" height="28px">
         <use class="svg-menu" href="./img/header.svg#icon-menu"></use>
-      </svg>
+      </svg> -->
+
+      <!-- ! Реалізація мобільного меню "бургер" через псевдоелементи з анімацією переходу в хрестик "закрити" -->
+      <div class="mobile-menu__open-icon">
+        <div class="mobile-menu__span-up">
+          <span></span>
+        </div>
+        <div class="mobile-menu__span-down">
+          <span></span>
+        </div>
+      </div>
     </div>
   </div>
 </header>

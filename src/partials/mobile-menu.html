@@ -1,2 +1,91 @@
 <!-- Maksym -->
-<section style="display: none"></section>
+<!-- <section style="display: none"></section> -->
+
+<!-- ! Юзер залогінений у своєму аккаунті -->
+
+<div class="mobile-menu-container__in">
+  <div class="mobile-menu-container__account-in">
+    <div class="account-in">
+      <div class="account-in__user">
+        <picture class="account-in__user-img" width="37" height="37">
+          <source
+            srcset="
+              ./img/mobile-menu/account-img@1x.png 1x,
+              ./img/mobile-menu/account-img@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img
+            src="./img/mobile-menu/account-img@1x.png"
+            alt="background image"
+            loading="lazy"
+          />
+        </picture>
+        <p class="account-in__user-name">Stephen</p>
+      </div>
+
+      <div class="mobile-menu__nav-header-container">
+        <nav class="account-in__nav-header">
+          <a
+            class="account-in__nav-item mobile-menu__active-hp"
+            href="./index.html"
+            >Home</a
+          >
+          <a
+            class="account-in__nav-item mobile-menu__active-sl"
+            href="./shopping-list-page.html"
+            >Shopping List
+            <svg width="20px" height="20px">
+              <use
+                class="account-in__logo-shop"
+                href="./img/header.svg#icon-shop"
+              ></use>
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <button type="button" class="account-btn__log-out">
+        Log out
+        <svg class="account-btn__log-out-icon" width="20px" height="20px">
+          <use href="./img/icons-mobile-menu.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <picture class="account-bcg__img" width="450" height="439">
+      <source
+        srcset="
+          ./img/mobile-menu/mobile-menu-bcg-img@1x.png 1x,
+          ./img/mobile-menu/mobile-menu-bcg-img@2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <img
+        class="account-bcg__img"
+        src="./img/mobile-menu/mobile-menu-bcg-img@1x.png"
+        alt="background image"
+        loading="lazy"
+      />
+    </picture>
+  </div>
+</div>
+
+<!-- ! Немає входу юзера в свій аакаунт -->
+<!-- <div class="mobile-menu-container__out">
+  <div class="mobile-menu-container__account-out">
+
+    <div class="account-out">
+      <button type="button" class="account-btn__sign-up">
+        Sign up
+        <svg class="account-btn__sign-up-icon" width="20px" height="20px">
+          <use href="../img/icons-mobile-menu.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <img class="account-bcg__img" src="../img/mobile-menu/mobile-menu-bcg-img@1x.png" alt="background image"
+      width="450px" loading="lazy">
+
+  </div>
+</div> -->

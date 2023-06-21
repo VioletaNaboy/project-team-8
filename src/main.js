@@ -7,5 +7,9 @@ import './js/pop-up/renderModal';
 import './js/pop-up/openModal';
 import './js/pop-up/getDataBooksById';
 import './js/modal.js';
+import './js/scroll-up.js';
 import './js/pop-up/addBookStorage.js';
+import './js/mobile-menu.js';
+import './js/loader.js';
+import './js/authorization.js';
 
