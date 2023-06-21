@@ -11,7 +11,8 @@
     </a>
     <nav class="nav-header">
       <a class="nav-item active-hp" href="./index.html">Home</a>
-      <a class="nav-item active-sl" href="./shopping-list-page.html">Shopping List
+      <a class="nav-item active-sl" href="./shopping-list-page.html"
+        >Shopping List
         <svg width="20px" height="20px">
           <use class="logo-shop" href="./img/header.svg#icon-shop"></use>
         </svg>
@@ -24,20 +25,37 @@
       <label class="switcher" for="switcher"></label>
       <div class="switcher-bckgrnd"></div>
     </div>
-    <div class="user-header">
-      <div class="user-foto"></div>
-      User
-      <svg width="23px" height="26px">
-        <use class="caret-down" href="./img/header.svg#icon-caret-down"></use>
-      </svg>
-      <div class="sign-up-header hidden-sign-up">
+    <div class="wrapper-log-in">
+      <!-- Unauthorized user -->
+      <div class="sign-up-header">
         Sign up
         <svg width="20px" height="20px">
-          <use class="arrow-right" href="./img/header.svg#icon-arrow-right"></use>
+          <use
+            class="arrow-right"
+            href="./img/header.svg#icon-arrow-right"
+          ></use>
         </svg>
       </div>
+      <!-- Unauthorized user -->
+      <!-- Authorized user -->
+      <div class="user-header hidden">
+        <div class="user-foto"></div>
+        User
+        <svg width="23px" height="26px">
+          <use class="caret-down" href="./img/header.svg#icon-caret-down"></use>
+        </svg>
+      </div>
+      <div class="log-out-header hidden">
+        Log out
+        <svg width="20px" height="20px">
+          <use
+            class="arrow-right"
+            href="./img/header.svg#icon-arrow-right"
+          ></use>
+        </svg>
+      </div>
+      <!-- Authorized user -->
     </div>
-
     <div class="menu-header">
       <!-- ! Реалізація мобільного меню "бургер" через svg -->
       <!-- <svg width="28px" height="28px">
@@ -53,7 +71,6 @@
           <span></span>
         </div>
       </div>
-
     </div>
   </div>
 </header>

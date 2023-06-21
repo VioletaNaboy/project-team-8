@@ -6,3 +6,4 @@ import './js/render-shopping-list';
 import './js/pop-up/getDataBooksById';
 import './js/mobile-menu.js';
 import './js/pagination.js';
+import './js/authorization.js';
