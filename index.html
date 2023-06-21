@@ -19,9 +19,9 @@
     
     
     
-    <script type="module" crossorigin src="/project-team-8/assets/index-b7022b54.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-team-8/assets/authorization-05988034.js">
-    <link rel="stylesheet" href="/project-team-8/assets/authorization-573bbcb2.css">
+    <script type="module" crossorigin src="/project-team-8/assets/index-20739cbb.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-team-8/assets/authorization-8df2a84d.js">
+    <link rel="stylesheet" href="/project-team-8/assets/authorization-88a16a74.css">
     <link rel="stylesheet" href="/project-team-8/assets/index-09c80e7d.css">
   </head>
 
@@ -151,7 +151,114 @@
   <h1 class="catalog-header">Best Seller <span>Books</span></h1>
 </section>
 
-      <section style="display: none">Modal</section>
+      <section class="setion-container">
+  <div class="modal hidden" data-modal id="myModal">
+    <div class="modal-content">
+      <div class="form-input">
+        <form class="form" method="POST">
+          <label for="username" class="label">
+            <button class="icon-close close-btn" data-modal-close>
+              <svg
+                class="icon-close"
+                width="14"
+                height="14"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 2L2 16M2 2L16 16"
+                  stroke="#111111"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <input
+              maxlength="50"
+              class="form-name"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="NAME"
+              required /><br
+          /></label>
+
+          <label for="email" class="label"></label>
+          <div class="form-lable">
+            <input
+              maxlength="50"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              class="form-name"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="EMAIL"
+              required
+            /><br />
+            <svg
+              class="icon"
+              width="26"
+              height="22"
+              viewBox="0 0 26 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24.0835 18L16.3335 11M9.66683 11L1.91687 18M1.3335 5.16669L10.8592 11.8347C11.6306 12.3747 12.0163 12.6446 12.4358 12.7492C12.8064 12.8416 13.194 12.8416 13.5645 12.7492C13.984 12.6446 14.3697 12.3747 15.1411 11.8347L24.6668 5.16669M6.9335 20.3334H19.0668C21.027 20.3334 22.0071 20.3334 22.7558 19.9519C23.4144 19.6163 23.9498 19.0809 24.2854 18.4223C24.6668 17.6736 24.6668 16.6935 24.6668 14.7334V7.26669C24.6668 5.3065 24.6668 4.32641 24.2854 3.57772C23.9498 2.91915 23.4144 2.38372 22.7558 2.04816C22.0071 1.66669 21.027 1.66669 19.0668 1.66669H6.9335C4.97331 1.66669 3.99322 1.66669 3.24453 2.04816C2.58596 2.38372 2.05053 2.91915 1.71497 3.57772C1.3335 4.32641 1.3335 5.3065 1.3335 7.26669V14.7334C1.3335 16.6935 1.3335 17.6736 1.71497 18.4223C2.05053 19.0809 2.58596 19.6163 3.24453 19.9519C3.99322 20.3334 4.97331 20.3334 6.9335 20.3334Z"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <label for="password" class="label"></label>
+          <div class="form-lable">
+            <input
+              maxlength="50"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              class="form-name"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="PASSWORD"
+              required
+            /><br />
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.8333 10.8333V7.33333C17.8333 4.11167 15.2217 1.5 12 1.5C8.77834 1.5 6.16667 4.11167 6.16667 7.33333V10.8333M7.1 22.5H16.9C18.8602 22.5 19.8403 22.5 20.589 22.1185C21.2475 21.783 21.783 21.2475 22.1185 20.589C22.5 19.8403 22.5 18.8602 22.5 16.9V16.4333C22.5 14.4731 22.5 13.4931 22.1185 12.7444C21.783 12.0858 21.2475 11.5504 20.589 11.2148C19.8403 10.8333 18.8602 10.8333 16.9 10.8333H7.1C5.13982 10.8333 4.15972 10.8333 3.41103 11.2148C2.75247 11.5504 2.21703 12.0858 1.88148 12.7444C1.5 13.4931 1.5 14.4731 1.5 16.4333V16.9C1.5 18.8602 1.5 19.8403 1.88148 20.589C2.21703 21.2475 2.75247 21.783 3.41103 22.1185C4.15972 22.5 5.13982 22.5 7.1 22.5Z"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <button class="form-btn btn-text" type="submit">SIGN UP</button>
+        </form>
+      </div>
+      <div class="registry">
+        <a class="registry-content link-sign-up" id="sign-up" href=""
+          >sign up</a
+        >
+        <a class="registry-content link-sign-in" id="sign-in" href=""
+          >sign in</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- Інна -->
 <section class="pop-up-backdrop is-hidden" data-modal>
