@@ -1,28 +1,27 @@
-<section class="setion-container">
+<section class="backdrop">
   <div class="modal hidden" data-modal id="myModal">
+    <div class="icon-close close-btn" data-modal-close>
+      <svg
+        class="icon-close"
+        width="14"
+        height="14"
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 2L2 16M2 2L16 16"
+          stroke="#111111"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
     <div class="modal-content">
       <div class="form-input">
         <form class="form" method="POST">
           <label for="username" class="label">
-            <button class="icon-close close-btn" data-modal-close>
-              <svg
-                class="icon-close"
-                width="14"
-                height="14"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 2L2 16M2 2L16 16"
-                  stroke="#111111"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-
             <input
               maxlength="50"
               class="form-name"
@@ -30,11 +29,11 @@
               id="username"
               name="username"
               placeholder="NAME"
-              required /><br
-          /></label>
+              required
+            />
+          </label>
 
-          <label for="email" class="label"></label>
-          <div class="form-lable">
+          <label for="email" class="label">
             <input
               maxlength="50"
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -43,27 +42,23 @@
               id="email"
               name="email"
               placeholder="EMAIL"
-              required
-            /><br />
-            <svg
+              required /><svg
               class="icon"
               width="26"
               height="22"
               viewBox="0 0 26 22"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg"> 
+            <svg>
               <path
                 d="M24.0835 18L16.3335 11M9.66683 11L1.91687 18M1.3335 5.16669L10.8592 11.8347C11.6306 12.3747 12.0163 12.6446 12.4358 12.7492C12.8064 12.8416 13.194 12.8416 13.5645 12.7492C13.984 12.6446 14.3697 12.3747 15.1411 11.8347L24.6668 5.16669M6.9335 20.3334H19.0668C21.027 20.3334 22.0071 20.3334 22.7558 19.9519C23.4144 19.6163 23.9498 19.0809 24.2854 18.4223C24.6668 17.6736 24.6668 16.6935 24.6668 14.7334V7.26669C24.6668 5.3065 24.6668 4.32641 24.2854 3.57772C23.9498 2.91915 23.4144 2.38372 22.7558 2.04816C22.0071 1.66669 21.027 1.66669 19.0668 1.66669H6.9335C4.97331 1.66669 3.99322 1.66669 3.24453 2.04816C2.58596 2.38372 2.05053 2.91915 1.71497 3.57772C1.3335 4.32641 1.3335 5.3065 1.3335 7.26669V14.7334C1.3335 16.6935 1.3335 17.6736 1.71497 18.4223C2.05053 19.0809 2.58596 19.6163 3.24453 19.9519C3.99322 20.3334 4.97331 20.3334 6.9335 20.3334Z"
                 stroke="#111111"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <label for="password" class="label"></label>
-          <div class="form-lable">
+              /></svg>
+</label>
+          <label for="password" class="label">
             <input
               maxlength="50"
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -72,8 +67,8 @@
               id="password"
               name="password"
               placeholder="PASSWORD"
-              required
-            /><br />
+              required />
+
             <svg
               class="icon"
               width="24"
@@ -88,9 +83,8 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              />
-            </svg>
-          </div>
+              /></svg
+          ></label>
 
           <button class="form-btn btn-text" type="submit">SIGN UP</button>
         </form>
