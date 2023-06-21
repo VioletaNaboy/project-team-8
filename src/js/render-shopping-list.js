@@ -621,7 +621,7 @@ export function renderShoppingList(dataArr) {
 
   if (dataArr.length === 0) {
     emptyShoppingListEl.classList.remove('display-none');
-    // paginationContainerEl.classList.add('display-none');
+    paginationContainerEl.classList.add('display-none');
   } else {
     // const shoppingListCard = dataArr
     //   .map(card => createMarkupLibraryCard(card))
