@@ -48,20 +48,26 @@
 </div>
 
 <!-- ! Немає входу юзера в свій аакаунт -->
-<!-- <div class="mobile-menu-container__out">
+<div class="mobile-menu-container__out">
   <div class="mobile-menu-container__account-out">
 
     <div class="account-out">
       <button type="button" class="account-btn__sign-up">
         Sign up
         <svg class="account-btn__sign-up-icon" width="20px" height="20px">
-          <use href="../img/icons-mobile-menu.svg#icon-arrow-narrow-right"></use>
+          <use href="./img/icons-mobile-menu.svg#icon-arrow-narrow-right"></use>
         </svg>
       </button>
     </div>
 
-    <img class="account-bcg__img" src="../img/mobile-menu/mobile-menu-bcg-img@1x.png" alt="background image"
-      width="450px" loading="lazy">
+    <picture class="account-bcg__img-container" width="450" height="439">
+      <source srcset="
+              ./img/mobile-menu/mobile-menu-bcg-img@1x.png 1x,
+              ./img/mobile-menu/mobile-menu-bcg-img@2x.png 2x
+            " media="(max-width: 767px)" />
+      <img class="account-bcg__img" src="./img/mobile-menu/mobile-menu-bcg-img@1x.png" alt="background image"
+        loading="lazy" />
+    </picture>
 
   </div>
-</div> -->
+</div>

@@ -4,9 +4,9 @@
   display: none;
 }
 
-.mobile-menu-container__out {
+/* .mobile-menu-container__out {
   display: none;
-}
+} */
 
 @media screen and (max-width: 767px) {
   /* JS прокрутка body*/
@@ -17,7 +17,8 @@
 
   /* --------- Користувач залогінений ----------- */
 
-  .mobile-menu-container__in {
+  .mobile-menu-container__in,
+  .mobile-menu-container__out {
     position: fixed;
     top: 0;
     right: 0;
@@ -33,31 +34,29 @@
     overflow-y: scroll;
   }
 
-  .mobile-menu-container__in._active-menu {
+  .mobile-menu-container__in._active-menu,
+  .mobile-menu-container__out._active-menu {
     display: block;
     transform: translatex(0%);
   }
 
-  /* html .mobile-menu-container__account-in,
-  body .mobile-menu-container__account-in {
-    height: 100%;
-  } */
-
-  .mobile-menu-container__account-in {
+  .mobile-menu-container__account-in,
+  .mobile-menu-container__account-out {
     z-index: 5;
 
     position: relative;
     overflow: hidden;
 
     background: radial-gradient(
-      183.6% 183.01% at 59.76% -23.42%,
+      189.32% 190.93% at 59.76% -23.42%,
       #4f2ee8 18.03%,
-      #ffffff 100%
+      #fff 100%
     );
   }
 
   /* ---- Фото та Ім'я користувача ---- */
-  .account-in {
+  .account-in,
+  .account-out {
     max-width: 480px;
     min-height: calc(100vh - 54px);
 
@@ -76,8 +75,6 @@
     padding-left: 20px;
 
     z-index: 7;
-
-    /* margin-top: 30px; */
   }
   .account-in__user {
     display: flex;
@@ -198,85 +195,86 @@
     -----------------------------
     */
 
-  .mobile-menu-container__out {
-    /* position: fixed;
+  /* .mobile-menu-container__out {
+    position: fixed;
     top: 0;
     right: 0;
+    min-width: 375px;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
 
-    transform: translatex(100%);
+    transform: translatex(0%);
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     z-index: 5;
 
-    overflow-y: scroll; */
-  }
-
-  .mobile-menu-container__out._active-menu {
-    /* display: block;
-    transform: translatex(0%); */
-  }
-
-  .mobile-menu-container__account-out {
-    /* z-index: 5;
+    overflow-y: scroll;
+  } */
+  /* .mobile-menu-container__out._active-menu {
+    display: block;
+    transform: translatex(0%);
+  } */
+  /* .mobile-menu-container__account-out {
+    z-index: 5;
 
     position: relative;
     overflow: hidden;
 
     background: radial-gradient(
-      183.6% 183.01% at 59.76% -23.42%,
+      189.32% 190.93% at 59.76% -23.42%,
       #4f2ee8 18.03%,
-      #ffffff 100%
-    ); */
-  }
+      #fff 100%
+    );
+  } */
+  /* .account-out {
+    max-width: 480px;
+    min-height: calc(100vh - 54px);
 
-  .account-out {
-    /* max-width: 480px;
-  min-height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  margin-top: 54px;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-top: 50px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-
-  z-index: 5; */
-  }
-  .account-btn__sign-up {
-    /* display: flex;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
 
-    width: 184px;
-    padding: 14px;
+    margin-top: 54px;
+    margin-left: auto;
+    margin-right: auto;
 
-    font-family: 'DM Sans';
-    font-style: normal;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    z-index: 7;
+  } */
+
+  /* ---- Кнопка "signup" ---- */
+  .mobile-menu-container__account-out .account-btn__sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+    width: 184px;
+    padding: 15px 14px;
+    margin-top: 50px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: calc(18 / 14);
-
-    letter-spacing: -0.04em;
+    letter-spacing: -0.56px;
 
     color: #ffffff;
 
-    background: #4f2ee8;
-    border: 1.5px solid #111111;
     border-radius: 18px;
+    border: 1.5px solid #111;
+    background: #4f2ee8;
 
-    z-index: 5; */
+    z-index: 7;
   }
   .account-btn__sign-up-icon {
-    /* stroke: #eac645;
-    fill: transparent; */
+    width: 16px;
+    stroke: #eac645;
+    fill: transparent;
   }
+  /* ---- Кнопка "signup" ---- */
 }
