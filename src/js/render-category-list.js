@@ -1,5 +1,4 @@
 import { getCategories } from './apiService.js';
-
 const categoryList = document.querySelector('.category__list');
 
 function renderCategoryList(result) {

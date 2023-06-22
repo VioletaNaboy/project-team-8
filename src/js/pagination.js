@@ -12,8 +12,8 @@ let startItemIndex = 0;
 
 export function createPagination() {
   const shoppingList = loadFromLocalStoradge('shopping-list');
-  console.log('hhh', shoppingList);
-  console.log(currentPage);
+  //   console.log('hhh', shoppingList);
+  //   console.log(currentPage);
   //   renderShoppingList(shoppingList);
 
   let dataToRenderShoppingList = shoppingList.slice(
@@ -50,16 +50,16 @@ export function createPagination() {
     visiblePages: 3,
     page: currentPage,
   };
-  console.log(shoppingList.length);
+  //   console.log(shoppingList.length);
   renderShoppingList(dataToRenderShoppingList);
 
-  console.log('test1');
+  //   console.log('test1');
 
   const instance = new Pagination(container, paginationOptions);
   instance.setTotalItems(shoppingList.length);
 
   //   instance.reset();
-  console.log('fff', shoppingList.length);
+  //   console.log('fff', shoppingList.length);
   instance.on('afterMove', pagination);
   function pagination(event) {
     // if (shoppingList.length < 4) {
@@ -73,8 +73,8 @@ export function createPagination() {
       startItemIndex + 3
     );
     currentPage = event.page;
-    console.log(event.page);
-    console.log('object', dataToRenderShoppingList);
+    // console.log(event.page);
+    // console.log('object', dataToRenderShoppingList);
 
     renderShoppingList(dataToRenderShoppingList);
 

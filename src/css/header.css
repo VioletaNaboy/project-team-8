@@ -51,6 +51,9 @@
 .switcher-checkbox {
   display: none;
 }
+.wrapper-log-in {
+  display: none;
+}
 .header-switcher {
   position: relative;
 }
@@ -84,9 +87,7 @@
 .nav-header {
   display: none;
 }
-.user-header {
-  display: none;
-}
+
 .sign-up-header {
   display: none;
 }
@@ -124,7 +125,8 @@
   .header-wrapper {
     gap: 24px;
   }
-  .sign-up-header {
+  .sign-up-header,
+  .log-out-header {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -132,8 +134,6 @@
     width: 184px;
     height: 48px;
     left: 0px;
-    top: 45px;
-    background: #4f2ee8;
     border: 1.5px solid #111111;
     border-radius: 18px;
     padding: 14px;
@@ -142,9 +142,20 @@
     font-size: 14px;
     line-height: 1.209;
     letter-spacing: -0.04em;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .sign-up-header {
+    top: 0;
+    background: #4f2ee8;
     color: #ffffff;
   }
-  .sign-up-header.hidden-sign-up {
+  .log-out-header {
+    top: 45px;
+    background: #ffffff;
+    color: #111111;
+  }
+  div.hidden {
     display: none;
   }
   .arrow-right {
@@ -152,10 +163,9 @@
     cursor: pointer;
   }
   .user-header {
-    position: relative;
     display: flex;
-    width: 184px;
-    height: 45px;
+    width: 100%;
+    height: 100%;
     background-color: #4f2ee8;
     border-radius: 36px;
     color: #ffffff;
@@ -168,6 +178,13 @@
     align-items: center;
     padding: 4px 12px;
     cursor: pointer;
+  }
+  .wrapper-log-in {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 184px;
+    height: 45px;
   }
   .user-foto {
     width: 37px;

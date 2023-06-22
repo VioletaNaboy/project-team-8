@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   gap: 14px;
   align-items: flex-start;
+  cursor: pointer;
 }
 .card .desc {
   display: flex;
