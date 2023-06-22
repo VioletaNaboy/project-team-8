@@ -33,7 +33,7 @@ function renderBook(id, book_image, title, author, description, buy_links) {
 
   const markup = `<img class="pop-up-book-img" src="${book_image}" alt="${title}" onerror="this.src=${NoImageAvailable}" loading="lazy"><div class="pop-up-wrap" id="${id}"><h2 class="pop-up-book-title">${title}</h2><p class="pop-up-book-author">${author}</p><p class="pop-up-book-desc">${description}</p><ul class="pop-up-buy-list">
 <li>
-    <a class='pop-up-buylink' href="${amazon.url}" target="_blank">
+    <a class='pop-up-buylink amazone' href="${amazon.url}" target="_blank">
     <picture width="62" height="19">
                   <source
                     srcset="${iconAmazonDesk} 1x, ${iconAmazonDesk2} 2x"
