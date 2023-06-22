@@ -8,7 +8,9 @@ export function closeModal() {
 function openModal() {
   modal.classList.remove('hidden');
 }
+
 signUpHeader.addEventListener('click', openModal);
+
 closeButton.addEventListener('click', closeModal);
 
 window.addEventListener('click', function (event) {
