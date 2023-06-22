@@ -194,6 +194,7 @@
   }
   .caret-down {
     fill: #ffffff;
+    stroke: none;
   }
   .menu-header {
     display: none;

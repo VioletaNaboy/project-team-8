@@ -27,7 +27,7 @@
     </div>
     <div class="wrapper-log-in">
       <!-- Unauthorized user -->
-      <div class="sign-up-header">
+      <div class="sign-up-header hidden">
         Sign up
         <svg width="20px" height="20px">
           <use
@@ -38,9 +38,24 @@
       </div>
       <!-- Unauthorized user -->
       <!-- Authorized user -->
-      <div class="user-header hidden">
-        <div class="user-foto"></div>
-        User
+      <div class="user-header">
+        <div class="user-foto">
+          <picture class="account-in__user-img" width="37" height="37">
+            <source
+              srcset="
+                ./img/mobile-menu/account-img@1x.png 1x,
+                ./img/mobile-menu/account-img@2x.png 2x
+              "
+              media="(max-width: 767px)"
+            />
+            <img
+              src="./img/mobile-menu/account-img@1x.png"
+              alt="background image"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        Stephen
         <svg width="23px" height="26px">
           <use class="caret-down" href="./img/header.svg#icon-caret-down"></use>
         </svg>
