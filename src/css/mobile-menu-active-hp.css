@@ -3,3 +3,8 @@
   color: black;
   margin-left: 16px;
 }
+
+.mobile-menu__active-sl:hover {
+  color: black;
+  transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
