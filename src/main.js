@@ -10,5 +10,6 @@ import './js/pop-up/getDataBooksById.js';
 import './js/scroll-up.js';
 import './js/pop-up/addBookStorage.js';
 import './js/mobile-menu.js';
+import './js/mobile-menu-log-out.js';
 import './js/loader.js';
 import './js/authorization.js';
