@@ -2,8 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0 auto;
 }
 
 .hiddenLoader {
@@ -11,12 +9,16 @@
 }
 
 .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
   width: 200px;
   height: 140px;
-  background: #785fe9;
+  background: #765bed;
   box-sizing: border-box;
-  position: relative;
-  border-radius: 8px;
+  /* position: relative; */
+  border-radius: 10px;
   perspective: 1000px;
 }
 
@@ -27,9 +29,9 @@
   right: 10px;
   top: 10px;
   bottom: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   background: #f5f5f5 no-repeat;
-  background-size: 60px 10px;
+  background-size: 60px 8px;
   background-image: linear-gradient(#b1b0ed 100px, transparent 0),
     linear-gradient(#b1b0ed 100px, transparent 0),
     linear-gradient(#b1b0ed 100px, transparent 0),
@@ -48,9 +50,9 @@
   right: 10px;
   top: 10px;
   bottom: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   background: #ffffff no-repeat;
-  background-size: 60px 10px;
+  background-size: 60px 8px;
   background-image: linear-gradient(#b1b0ed 100px, transparent 0),
     linear-gradient(#b1b0ed 100px, transparent 0),
     linear-gradient(#b1b0ed 100px, transparent 0);
