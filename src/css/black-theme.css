@@ -34,7 +34,7 @@ body.black-theme-body {
 .black-theme-body .icon:focus {
   stroke: #4f2ee8;
 }
-.black-theme-body .amazone {
+.black-theme-body .amazon {
   filter: brightness(0) invert(1);
 }
 .header.black-theme-header {
