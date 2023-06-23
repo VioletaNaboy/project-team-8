@@ -9,7 +9,7 @@ import{r as it,s as Ce,m as Ee}from"./authorization-c490fce8.js";function ke(e,t
   <div class="gallery-and-genre-type">
       <p class="genre-type">${n.list_name}</p>
       <div class="gallery" id="${n.list_name.split(" ").join("-")}">
-     ${n.books.map(r=>` <div class="card" id=${r._id}><div class="wrapper"><img src="${r.book_image}" class="book-cover" loading="lazy"><div class="overlay-box">
+     ${n.books.map(r=>` <div class="card" id=${r._id}><div class="wrapper"><img src="${r.book_image}" class="book-cover" loading="lazy" alt="${r.title}"><div class="overlay-box">
          <p class="overlay-text">
            Quick view
          </p>
@@ -24,7 +24,7 @@ import{r as it,s as Ce,m as Ee}from"./authorization-c490fce8.js";function ke(e,t
       
   </div>
   <button class="see-more">SEE MORE</button>
-</div>`).join("")}`)};he();Ke().then(e=>{Qe(e,x);const t=document.querySelectorAll(".see-more"),n=document.querySelector(".gallery").clientHeight;t.forEach((r,o)=>{r.addEventListener("click",async()=>{const s=document.getElementById(e.data[o].list_name.split(" ").join("-"));r.textContent==="SEE MORE"?(s.style.height=n*2+"px",s.style.overflowY="scroll",s.innerHTML="",r.textContent="SEE LESS",ae(e.data[o].list_name,s)):(s.innerHTML="",ae(e.data[o].list_name,s),s.style.height=n+"px",s.style.overflowY="hidden",r.textContent="SEE MORE")})})});Bn.addEventListener("click",async()=>{x.innerHTML="",he(),x.insertAdjacentHTML("afterbegin",'<h1 class="catalog-header">Best Seller <span>Books</span></h1>');const e=await Ke();Qe(e,x)});const ae=(e,t)=>{Tn(e).then(n=>{Ye(),t.insertAdjacentHTML("beforeend",`<div class="gallery-select">${n.data.map(r=>`<div class="card" id=${r._id}><div class="wrapper"><img src="${r.book_image}" class="book-cover" loading="lazy"><div class="overlay-box">
+</div>`).join("")}`)};he();Ke().then(e=>{Qe(e,x);const t=document.querySelectorAll(".see-more"),n=document.querySelector(".gallery").clientHeight;t.forEach((r,o)=>{r.addEventListener("click",async()=>{const s=document.getElementById(e.data[o].list_name.split(" ").join("-"));r.textContent==="SEE MORE"?(s.style.height=n*2+"px",s.style.overflowY="scroll",s.innerHTML="",r.textContent="SEE LESS",ae(e.data[o].list_name,s)):(s.innerHTML="",ae(e.data[o].list_name,s),s.style.height=n+"px",s.style.overflowY="hidden",r.textContent="SEE MORE")})})});Bn.addEventListener("click",async()=>{x.innerHTML="",he(),x.insertAdjacentHTML("afterbegin",'<h1 class="catalog-header">Best Seller <span>Books</span></h1>');const e=await Ke();Qe(e,x)});const ae=(e,t)=>{Tn(e).then(n=>{Ye(),t.insertAdjacentHTML("beforeend",`<div class="gallery-select">${n.data.map(r=>`<div class="card" id=${r._id}><div class="wrapper"><img src="${r.book_image}" class="book-cover" loading="lazy" alt="${r.title}"><div class="overlay-box">
           <p class="overlay-text">
             Quick view
           </p>
