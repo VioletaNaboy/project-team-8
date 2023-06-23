@@ -60,6 +60,8 @@ getTopBooks().then(result => {
         item.textContent = 'SEE LESS';
         renderSelectCategoryInObject(result.data[index].list_name, block);
       } else {
+        block.innerHTML = '';
+        renderSelectCategoryInObject(result.data[index].list_name, block);
         block.style.height = originHeight + 'px';
         block.style.overflowY = 'hidden';
         item.textContent = 'SEE MORE';
