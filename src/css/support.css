@@ -95,6 +95,10 @@
   transform: scale(1.15);
 }
 
+.support-icon {
+  margin: 0 auto;
+}
+
 .support-slider-svg-up {
   transform: rotate(180deg);
 }
