@@ -21,7 +21,7 @@ const renderTopBooks = (topBooks, object) => {
       <div class="gallery" id="${item.list_name.split(' ').join('-')}">
      ${item.books
        .map(book => {
-         return ` <div class="card" id=${book._id}><div class="wrapper"><img src="${book.book_image}" class="book-cover"><div class="overlay-box">
+         return ` <div class="card" id=${book._id}><div class="wrapper"><img src="${book.book_image}" class="book-cover" loading="lazy" alt="${book.title}"><div class="overlay-box">
          <p class="overlay-text">
            Quick view
          </p>
@@ -60,6 +60,8 @@ getTopBooks().then(result => {
         item.textContent = 'SEE LESS';
         renderSelectCategoryInObject(result.data[index].list_name, block);
       } else {
+        block.innerHTML = '';
+        renderSelectCategoryInObject(result.data[index].list_name, block);
         block.style.height = originHeight + 'px';
         block.style.overflowY = 'hidden';
         item.textContent = 'SEE MORE';
@@ -87,7 +89,7 @@ const renderSelectCategoryInObject = (category, object) => {
       'beforeend',
       `<div class="gallery-select">${result.data
         .map(element => {
-          return `<div class="card" id=${element._id}><div class="wrapper"><img src="${element.book_image}" class="book-cover"><div class="overlay-box">
+          return `<div class="card" id=${element._id}><div class="wrapper"><img src="${element.book_image}" class="book-cover" loading="lazy" alt="${element.title}"><div class="overlay-box">
           <p class="overlay-text">
             Quick view
           </p>
