@@ -72,6 +72,13 @@
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  .pop-up-book-info {
+    min-height: 546px;
+    max-height: 596px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .pop-up-book-info {
     height: 281px;
